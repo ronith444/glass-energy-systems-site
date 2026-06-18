@@ -1,0 +1,54 @@
+:root {
+  --color-canopy: #104336;
+  --color-dark-canopy: #071b17;
+  --color-near-black-green: #081513;
+  --color-mint-pulse: #0fff87;
+  --color-orb-violet: #7c18d3;
+  --color-cream-paper: #f3f1ec;
+  --color-sheet-white: #ffffff;
+  --color-bark: #101f1e;
+  --color-ink: #000000;
+  --color-slate: #535e5d;
+  --color-charcoal: #333333;
+  --color-sage-mist: #afc4bf;
+  --color-pale-sage: #c2cec8;
+  --color-muted-slate: #798281;
+  --color-hero-wash: #e8e7f5;
+  --color-power-copper: #b97a56;
+
+  --font-brand: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  --page-max-width: 1280px;
+  --page-gutter: clamp(20px, 4vw, 48px);
+
+  --radius-input: 4px;
+  --radius-button: 8px;
+  --radius-card: 16px;
+
+  --space-section-desktop: 120px;
+  --space-section-tablet: 96px;
+  --space-section-mobile: 72px;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 96px;
+
+  --text-display: clamp(3.5rem, 7vw, 4.5rem);
+  --text-section: clamp(2.75rem, 5vw, 3.5rem);
+  --text-subheading: clamp(1.25rem, 2vw, 1.5rem);
+  --text-body: clamp(1rem, 1.4vw, 1.125rem);
+  --text-eyebrow: 0.8125rem;
+  --text-meta: 0.875rem;
+
+  --connector-center-x: 50%;
+  --connector-left-x: 18%;
+  --connector-right-x: 82%;
+  --connector-entry-y: 0;
+  --connector-exit-y: 100%;
+}

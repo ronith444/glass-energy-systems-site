@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Handoff preparation complete.
+Frontend reset foundation complete.
 
 ## Completed
 
@@ -24,16 +24,22 @@ Handoff preparation complete.
 - Full section continuity map completed.
 - Connector entry and exit rules completed.
 - Responsive section specifications completed.
+- Old frontend reset on rebuild branch.
+- New source architecture created.
+- Design tokens implemented.
+- Structured content implemented.
+- Semantic page skeleton implemented.
+- Surface progression implemented.
+- Connector foundation implemented.
 
 ## Not Started
 
 - Repository cleanup
-- Previous frontend removal
-- Old frontend removal
-- New design-token implementation
-- New component implementation
-- New frontend implementation
-- Responsive implementation
+- Pixel-perfect desktop implementation
+- Final SVG illustrations
+- Screenshot comparison
+- Tablet refinement
+- Mobile refinement
 - Motion
 - Staging
 - Production launch
@@ -42,4 +48,4 @@ Handoff preparation complete.
 
 Do not modify the `archive/old-website` branch or the `old-website-final` tag.
 
-Do not begin frontend implementation, repository cleanup, dependency changes or website deletion until the next explicit rebuild task.
+Do not begin repository cleanup, pixel-perfect implementation, final illustration work, motion, staging or production launch until the next explicit rebuild task.
