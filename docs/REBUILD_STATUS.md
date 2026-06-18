@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Opening graphics polish pass complete.
+Rendered homepage visual integration pass complete.
 
 ## Completed
 
@@ -55,20 +55,29 @@ Opening graphics polish pass complete.
 - Transition-height refinement completed.
 - Why PCS entry refinement completed.
 - Opening graphics screenshot review completed.
+- Rendered homepage visual asset integration completed.
+- Rendered visual helper component completed.
+- Hero rendered asset integration completed.
+- What We Are Building rendered asset integration completed.
+- Service Speed rendered asset integration completed.
+- Deployment Model rendered asset integration completed.
+- System Architecture rendered asset integration completed.
+- Initial Platform rendered asset integration completed.
+- Built for India rendered asset integration completed.
+- Development Pathway rendered asset integration completed.
+- Partnership CTA rendered asset integration completed.
+- Placeholder CSS/SVG diagram removal completed.
+- Rendered-asset responsive screenshot review completed.
 
 ## Not Started
 
 - Repository cleanup
 - Full-page pixel-perfect desktop implementation
 - Why PCS First detailed content
-- Deployment Model detailed implementation
-- System Architecture implementation
-- Initial Platform refinement
-- Lower-section detailed implementation
-- Final SVG illustrations beyond the opening sections
-- Full-page screenshot comparison
-- Full tablet refinement
-- Full mobile refinement
+- Lower-section detailed copy/layout refinement
+- Final bespoke SVG refinements beyond rendered WebP support
+- Full tablet polish refinement
+- Full mobile polish refinement
 - Motion
 - Staging
 - Production launch

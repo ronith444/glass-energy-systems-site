@@ -1,5 +1,4 @@
 import type { TimelineStage } from "../../types/content";
-import { StatusNode } from "../ui/StatusNode";
 
 interface DeploymentTimelineProps {
   stages: TimelineStage[];
@@ -7,10 +6,10 @@ interface DeploymentTimelineProps {
 
 export function DeploymentTimeline({ stages }: DeploymentTimelineProps) {
   return (
-    <ol className="timeline timeline-six" aria-label="Deployment model stages">
+    <ol className="rendered-stage-list rendered-stage-list-six" aria-label="Deployment model stages">
       {stages.map((stage, index) => (
         <li key={stage.title}>
-          <StatusNode index={index + 1} />
+          <span className="stage-number">0{index + 1}</span>
           <h3>{stage.title}</h3>
           {stage.body ? <p>{stage.body}</p> : null}
         </li>

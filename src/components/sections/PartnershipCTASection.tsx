@@ -1,10 +1,11 @@
+import partnershipVisual from "../../assets/visuals/11-partnership-glass-mark.webp";
 import { partnershipCta } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Button } from "../ui/Button";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
-import { GlassPlane } from "../ui/GlassPlane";
+import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function PartnershipCTASection() {
   return (
@@ -22,11 +23,12 @@ export function PartnershipCTASection() {
             </Button>
           </div>
         </div>
-        <div className="plane-stack" aria-hidden="true">
-          <GlassPlane />
-          <GlassPlane className="glass-plane-offset" />
-          <GlassPlane className="glass-plane-deep" />
-        </div>
+        <RenderedSectionVisual
+          src={partnershipVisual}
+          alt="Glass panel structure resolving the deployment connector into a partner handoff."
+          aspectRatio="1491 / 1055"
+          className="partnership-render"
+        />
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>

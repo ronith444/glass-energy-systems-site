@@ -1,20 +1,33 @@
-import { systemArchitecture } from "../../content/siteContent";
-import { ArchitectureDiagram } from "../diagrams/ArchitectureDiagram";
+import architectureVisual from "../../assets/visuals/06-system-architecture.webp";
+import { architectureNodes, systemArchitecture } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
+import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function SystemArchitectureSection() {
   return (
     <Section id={systemArchitecture.id} surface="sage" labelledBy="architecture-title">
       <ConnectorAnchor position="entry" />
-      <Container className="split-grid">
+      <Container className="architecture-render-layout">
         <div>
           <Eyebrow>{systemArchitecture.eyebrow}</Eyebrow>
           <h2 id="architecture-title">{systemArchitecture.headline}</h2>
+          <ul className="architecture-node-list">
+            {architectureNodes.map((node) => (
+              <li key={node.title} data-kind={node.kind}>
+                {node.title}
+              </li>
+            ))}
+          </ul>
         </div>
-        <ArchitectureDiagram />
+        <RenderedSectionVisual
+          src={architectureVisual}
+          alt="Open system architecture network centered on power conversion with battery, controls, grid, diagnostics and C&I application nodes."
+          aspectRatio="1491 / 1055"
+          className="architecture-render"
+        />
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>

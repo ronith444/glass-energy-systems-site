@@ -1,11 +1,10 @@
+import approachVisual from "../../assets/visuals/02-approach-capability-system.webp";
 import { approachOutcomes, capabilities, whatWeBuild } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
-import { TechnicalGlyph } from "../diagrams/VisualPrimitives";
-
-const capabilityGlyphs = ["source", "integrate", "validate", "support"] as const;
+import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function WhatWeBuildSection() {
   return (
@@ -22,18 +21,16 @@ export function WhatWeBuildSection() {
             ))}
           </ul>
         </div>
-        <div className="approach-panel" aria-label="Glass capability workflow">
-          <div className="approach-panel-planes" aria-hidden="true">
-            <span />
-            <span />
-            <span />
-          </div>
-          <ul className="capability-list">
-            {capabilities.map((item, index) => (
+        <div className="approach-visual-stack">
+          <RenderedSectionVisual
+            src={approachVisual}
+            alt="Rendered technical register showing PCS hardware, documentation, grid context and support readiness."
+            aspectRatio="1491 / 1055"
+            className="approach-render"
+          />
+          <ul className="capability-list rendered-capability-list" aria-label="Glass capability workflow">
+            {capabilities.map((item) => (
               <li key={item.title}>
-                <span className={`capability-marker capability-marker-${index + 1}`} aria-hidden="true">
-                  <TechnicalGlyph variant={capabilityGlyphs[index]} />
-                </span>
                 <span>
                   <strong>{item.title}</strong>
                   <em>{item.body}</em>

@@ -91,6 +91,22 @@ Additional rejected or alternate copies are in `references/archive/rejected-and-
 
 Existing production assets in `assets/` and `public/` were not replaced. Approved copies were placed under `references/brand/` for handoff use.
 
+## Rendered Homepage Visual Assets
+
+Imported section visuals under `src/assets/visuals/` are production WebP illustrations, not reference screenshots. They are used as section-owned visuals with all important messaging remaining as HTML.
+
+| File | Website role | Dimensions | Size | Status | Notes |
+|---|---|---:|---:|---|---|
+| `src/assets/visuals/01-hero-system-desktop.webp` | Hero system visual | 1672x941 | 73.8 KB | INTEGRATED | Primary hero illustration. Technical labels remain HTML. |
+| `src/assets/visuals/02-approach-capability-system.webp` | What We Are Building / Approach | 1491x1055 | 78.1 KB | INTEGRATED | Supports capability workflow while approved copy remains HTML. |
+| `src/assets/visuals/03-service-speed-transition.webp` | Service Speed transition | 1672x941 | 105.4 KB | INTEGRATED | Used as the main service-speed illustration in the dark-to-sage transition. |
+| `src/assets/visuals/05-deployment-model.webp` | Deployment Model | 1672x941 | 48.1 KB | INTEGRATED | Supports the deployment-process section; stage labels remain HTML. |
+| `src/assets/visuals/06-system-architecture.webp` | System Architecture | 1491x1055 | 113.0 KB | INTEGRATED | Primary architecture illustration; architecture node labels remain HTML. |
+| `src/assets/visuals/07-initial-platform.webp` | Initial Platform | 1491x1055 | 88.8 KB | INTEGRATED | Supports initial 100kW platform focus; specs and qualifiers remain HTML. |
+| `src/assets/visuals/08-built-for-india.webp` | Built for India | 1491x1055 | 115.1 KB | INTEGRATED | Supports India-owned deployment capability section. |
+| `src/assets/visuals/10-development-pathway.webp` | Development Pathway | 1672x941 | 55.1 KB | INTEGRATED | Supports build-sequence section; timeline text remains HTML. |
+| `src/assets/visuals/11-partnership-glass-mark.webp` | Partnership CTA | 1491x1055 | 58.7 KB | INTEGRATED | Supports final partner handoff CTA. |
+
 ## Files That Must Not Be Used in the Rebuild
 
 - Old red and black gaming-style concepts.

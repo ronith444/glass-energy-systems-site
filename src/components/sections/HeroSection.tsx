@@ -1,10 +1,12 @@
-import { hero } from "../../content/siteContent";
+import heroSystemVisual from "../../assets/visuals/01-hero-system-desktop.webp";
+import { hero, technicalLabels } from "../../content/siteContent";
 import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
-import { HeroSystemDiagram } from "../diagrams/HeroSystemDiagram";
+import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
+import { TechnicalLabel } from "../ui/TechnicalLabel";
 
 export function HeroSection() {
   return (
@@ -21,7 +23,21 @@ export function HeroSection() {
             </Button>
           </div>
         </div>
-        <HeroSystemDiagram />
+        <div className="hero-rendered-system">
+          <RenderedSectionVisual
+            src={heroSystemVisual}
+            alt="Conceptual PCS-centered system linking grid interface, power conversion, storage and C&I application."
+            aspectRatio="1672 / 941"
+            className="hero-system-render"
+            fetchPriority="high"
+            loading="eager"
+          />
+          <div className="technical-labels" aria-label="Technical focus">
+            {technicalLabels.map((item) => (
+              <TechnicalLabel key={item.label}>{item.label}</TechnicalLabel>
+            ))}
+          </div>
+        </div>
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>
