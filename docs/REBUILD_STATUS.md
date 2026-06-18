@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Service Speed and dark-to-light transition pass complete.
+Opening graphics polish pass complete.
 
 ## Completed
 
@@ -44,6 +44,17 @@ Service Speed and dark-to-light transition pass complete.
 - Dark-to-light surface transition completed.
 - Why PCS First entry treatment completed.
 - Service Speed screenshot comparison completed.
+- Sticky-header correction completed.
+- Hero proportion refinement completed.
+- Opening graphic-language refinement completed.
+- Reusable glass and trace primitives completed.
+- Approach typography refinement completed.
+- Capability-panel graphic refinement completed.
+- Service Speed graphic refinement completed.
+- Connector-system refinement completed.
+- Transition-height refinement completed.
+- Why PCS entry refinement completed.
+- Opening graphics screenshot review completed.
 
 ## Not Started
 

@@ -1,28 +1,33 @@
 import { TechnicalLabel } from "../ui/TechnicalLabel";
 import { technicalLabels } from "../../content/siteContent";
+import { GlassPlaneStack, TechnicalGlyph } from "./VisualPrimitives";
 
 const systemNodes = [
   {
     className: "grid-interface",
+    glyph: "grid",
     title: "Grid interface",
     detail: "400/415V AC · 3P · 50Hz",
   },
   {
     className: "power-conversion",
+    glyph: "conversion",
     title: "Power conversion",
     detail: "100kW bidirectional PCS path",
   },
   {
     className: "storage-system",
+    glyph: "storage",
     title: "Storage system",
     detail: "700-1000V DC battery side",
   },
   {
     className: "ci-application",
+    glyph: "load",
     title: "C&I application",
     detail: "Commercial and industrial loads",
   },
-];
+] as const;
 
 export function HeroSystemDiagram() {
   return (
@@ -46,15 +51,9 @@ export function HeroSystemDiagram() {
           {systemNodes.map((node) => (
             <div className={`system-node system-node-${node.className}`} key={node.title}>
               {node.title === "Power conversion" ? (
-                <div className="conversion-stack" aria-hidden="true">
-                  <span className="conversion-plane conversion-plane-back" />
-                  <span className="conversion-plane conversion-plane-mid" />
-                  <span className="conversion-plane conversion-plane-front" />
-                  <span className="conversion-core" />
-                  <span className="conversion-pulse" />
-                </div>
+                <GlassPlaneStack />
               ) : (
-                <span className="node-illustration" />
+                <TechnicalGlyph variant={node.glyph} className="node-illustration" />
               )}
               <span className="node-title">{node.title}</span>
               <span className="node-detail">{node.detail}</span>

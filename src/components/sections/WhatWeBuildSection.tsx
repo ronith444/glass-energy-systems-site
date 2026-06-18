@@ -3,6 +3,9 @@ import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
+import { TechnicalGlyph } from "../diagrams/VisualPrimitives";
+
+const capabilityGlyphs = ["source", "integrate", "validate", "support"] as const;
 
 export function WhatWeBuildSection() {
   return (
@@ -26,9 +29,11 @@ export function WhatWeBuildSection() {
             <span />
           </div>
           <ul className="capability-list">
-            {capabilities.map((item) => (
+            {capabilities.map((item, index) => (
               <li key={item.title}>
-                <span className="capability-marker" aria-hidden="true" />
+                <span className={`capability-marker capability-marker-${index + 1}`} aria-hidden="true">
+                  <TechnicalGlyph variant={capabilityGlyphs[index]} />
+                </span>
                 <span>
                   <strong>{item.title}</strong>
                   <em>{item.body}</em>
@@ -37,7 +42,6 @@ export function WhatWeBuildSection() {
                   <i aria-hidden="true" />
                   {item.status}
                 </small>
-                <b aria-hidden="true">-&gt;</b>
               </li>
             ))}
           </ul>
