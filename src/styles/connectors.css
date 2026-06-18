@@ -52,7 +52,7 @@
 }
 
 .approach-section .connector-exit {
-  height: 90px;
+  height: 124px;
 }
 
 .approach-section .connector-entry::before {
@@ -63,6 +63,50 @@
   height: 1px;
   content: "";
   background: color-mix(in srgb, var(--color-mint-pulse) 44%, transparent);
+}
+
+.service-speed-section .connector-entry {
+  height: 104px;
+}
+
+.service-speed-section .connector-entry::before {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 1px;
+  height: clamp(120px, 15vw, 200px);
+  content: "";
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--color-mint-pulse) 54%, transparent),
+    color-mix(in srgb, var(--color-mint-pulse) 22%, transparent)
+  );
+}
+
+.service-speed-section .connector-exit {
+  height: clamp(118px, 14vw, 180px);
+}
+
+.service-speed-section .connector-exit::after {
+  background: color-mix(in srgb, var(--color-cream-paper) 82%, transparent);
+}
+
+.why-pcs-entry-section .connector-entry {
+  height: 78px;
+}
+
+.why-pcs-entry-section .connector-entry::before {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  width: clamp(170px, 22vw, 320px);
+  height: 1px;
+  content: "";
+  background: color-mix(in srgb, var(--color-mint-pulse) 36%, transparent);
+}
+
+.why-pcs-entry-section .connector-entry::after {
+  background: color-mix(in srgb, var(--color-cream-paper) 92%, transparent);
 }
 
 .approach-panel::before,
@@ -151,6 +195,14 @@
   .approach-panel::after {
     right: 12%;
   }
+
+  .service-speed-section .connector-entry::before {
+    height: 92px;
+  }
+
+  .why-pcs-entry-section .connector-entry::before {
+    width: 1px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -165,6 +217,8 @@
   }
 
   .approach-section .connector-entry::before,
+  .service-speed-section .connector-entry::before,
+  .why-pcs-entry-section .connector-entry::before,
   .approach-panel::before,
   .approach-panel::after,
   .connector-copper,

@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Opening Arcadia visual-fidelity pass complete.
+Service Speed and dark-to-light transition pass complete.
 
 ## Completed
 
@@ -38,12 +38,21 @@ Opening Arcadia visual-fidelity pass complete.
 - What We Are Building implementation completed.
 - Opening responsive baseline completed.
 - Opening screenshot comparison completed.
+- Service Speed desktop implementation completed.
+- Service Speed responsive baseline completed.
+- Approach-to-Service connector completed.
+- Dark-to-light surface transition completed.
+- Why PCS First entry treatment completed.
+- Service Speed screenshot comparison completed.
 
 ## Not Started
 
 - Repository cleanup
 - Full-page pixel-perfect desktop implementation
-- Service Speed detailed implementation
+- Why PCS First detailed content
+- Deployment Model detailed implementation
+- System Architecture implementation
+- Initial Platform refinement
 - Lower-section detailed implementation
 - Final SVG illustrations beyond the opening sections
 - Full-page screenshot comparison

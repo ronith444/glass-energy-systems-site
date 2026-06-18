@@ -6,20 +6,31 @@ import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 
 export function ServiceSpeedSection() {
   return (
-    <Section id={serviceSpeed.id} surface="transition" labelledBy="service-speed-title">
+    <Section
+      id={serviceSpeed.id}
+      surface="transition"
+      labelledBy="service-speed-title"
+      className="service-speed-section"
+    >
       <ConnectorAnchor position="entry" />
-      <Container className="split-grid">
-        <div>
+      <Container className="service-speed-layout">
+        <div className="service-speed-copy">
           <Eyebrow>{serviceSpeed.eyebrow}</Eyebrow>
           <h2 id="service-speed-title">{serviceSpeed.headline}</h2>
           <p>{serviceSpeed.body}</p>
-          <p className="section-highlight">{serviceSpeed.highlight}</p>
         </div>
-        <ul className="principle-grid">
-          {servicePrinciples.map((item) => (
-            <li key={item.title}>{item.title}</li>
+        <ol className="service-process" aria-label="Service speed process">
+          {servicePrinciples.map((item, index) => (
+            <li key={item.title} className={`service-stage service-stage-${index + 1}`}>
+              <span className="service-stage-icon" aria-hidden="true">
+                <span />
+              </span>
+              <span className="service-stage-index">0{index + 1}</span>
+              <strong>{item.title}</strong>
+            </li>
           ))}
-        </ul>
+        </ol>
+        <p className="section-highlight">{serviceSpeed.highlight}</p>
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>
