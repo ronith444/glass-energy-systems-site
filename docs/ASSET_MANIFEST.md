@@ -4,7 +4,7 @@
 
 Imported assets were inspected from `references/incoming/` on 2026-06-17. Twelve incoming files were found and all twelve originals were copied unchanged into `references/archive/import-originals-20260617/`.
 
-The active reference set is intentionally incomplete. Missing sections are recorded as `MISSING` instead of creating fake mockups or reusing one image across multiple sections without a clear reason.
+The active reference set is intentionally incomplete. Missing sections are recorded as `NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC` instead of creating fake mockups or reusing one image across multiple sections without a clear reason. Use `docs/MISSING_SECTION_SPECS.md` as the implementation source for those sections.
 
 | ID | Original file | Active file | Category | Website role | Dimensions | Size | Status | Notes |
 |---|---|---|---|---|---|---|---|---|
@@ -41,12 +41,12 @@ The active reference set is intentionally incomplete. Missing sections are recor
 
 | Section | Status | Notes |
 |---|---|---|
-| 05 Deployment Model | MISSING | No dedicated approved mockup supplied. |
-| 06 System Architecture | MISSING | No dedicated approved mockup supplied; do not reuse hero architecture as final section mockup. |
-| 08 Built for India | MISSING | Present inside `07-initial-platform.png`, but no dedicated mockup supplied. |
-| 10 Development Pathway | MISSING | Present inside lower-page composite, but no dedicated active mockup assigned. |
-| 11 Partnership CTA | MISSING | Present inside lower-page composite, but no dedicated active mockup assigned. |
-| 12 Footer | MISSING | Present inside lower-page composite, but no dedicated active mockup assigned. |
+| 05 Deployment Model | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. No dedicated approved mockup supplied. |
+| 06 System Architecture | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. Do not reuse hero architecture as final section mockup. |
+| 08 Built for India | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. Present inside `07-initial-platform.png`, but no dedicated mockup supplied. |
+| 10 Development Pathway | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. Present inside lower-page composite, but no dedicated active mockup assigned. |
+| 11 Partnership CTA | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. Present inside lower-page composite, but no dedicated active mockup assigned. |
+| 12 Footer | NO DEDICATED RASTER MOCKUP — IMPLEMENT FROM APPROVED SPEC | Use `docs/MISSING_SECTION_SPECS.md`. Present inside lower-page composite, but no dedicated active mockup assigned. |
 
 ## Arcadia References
 

@@ -20,13 +20,19 @@ Handoff preparation complete.
 - Asset manifest completed.
 - Design handoff completed.
 - Content handoff completed.
+- Missing section layout specifications completed.
+- Full section continuity map completed.
+- Connector entry and exit rules completed.
+- Responsive section specifications completed.
 
 ## Not Started
 
 - Repository cleanup
 - Previous frontend removal
+- Old frontend removal
 - New design-token implementation
 - New component implementation
+- New frontend implementation
 - Responsive implementation
 - Motion
 - Staging
