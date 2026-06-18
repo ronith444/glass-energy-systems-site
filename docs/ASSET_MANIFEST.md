@@ -57,6 +57,7 @@ These are interaction, rhythm, typography, spacing and surface-treatment referen
 
 ## Brand Assets
 
+- `references/brand/glass-logo-correct-master.jpeg`: correct master logo supplied during the visual repair pass; 1254x1254 JPEG, 95.4 KB, SHA-256 `fc2e20cc9bc0e1f2833c2ac0befe3b7baee9ddb3d8b3403bcedda2af6217172a`. This is the current source of truth because no SVG, PDF, AI or transparent PNG master was supplied.
 - `references/brand/glass-logo-full-dark.png`: dark-background full logo reference; raster, non-transparent.
 - `references/brand/glass-logo-mark.png`: existing production mark; general identity reference.
 - `references/brand/glass-logo-mark-96.png`: compact mark reference.
@@ -67,6 +68,31 @@ These are interaction, rhythm, typography, spacing and surface-treatment referen
 - `references/brand/glass-og-image.jpg`: social sharing reference.
 
 No SVG logo or transparent full-logo lockup was supplied.
+
+## Production Logo Variants
+
+The current web logo variants were extracted from `references/brand/glass-logo-correct-master.jpeg` for production use. They preserve the supplied panel geometry and raster wordmark pixels; the website must not recreate the wordmark with HTML text.
+
+| File | Role | Dimensions | Size | SHA-256 | Notes |
+|---|---|---:|---:|---|---|
+| `src/assets/brand/glass-logo-full-dark.png` | Desktop header and footer full lockup on dark surfaces | 308x128 | 31.7 KB | `61f20f2e799f91532c2095e6ef8e06b54b1ab0cbfe4784f64b3ce48067bdbfb7` | Compact web lockup assembled from the JPEG master mark and wordmark pixels; no text is retyped. |
+| `src/assets/brand/glass-logo-mark-dark.png` | Mobile header mark on dark surfaces | 260x366 | 98.8 KB | `a947734ea20d8c570043cdb7a699277fe8f3735ddcf3d6a906a3d4216c9ec8d6` | Transparent mark extracted from the master and cleaned for dark/evergreen UI use. |
+| `src/assets/brand/glass-logo-mark-transparent.png` | Transparent mark reference / controlled motif source | 260x366 | 98.8 KB | `a947734ea20d8c570043cdb7a699277fe8f3735ddcf3d6a906a3d4216c9ec8d6` | Same cleaned transparent mark; use sparingly and test against surface contrast. |
+
+Existing favicon, app icon and Open Graph assets remain unchanged. They were not replaced because the supplied source is a JPEG master, and the extracted panel mark is not a superior tiny-icon source.
+
+Sampled logo-derived color tokens:
+
+```css
+--color-glass-blue-deep: #193a7d;
+--color-glass-blue: #4481ba;
+--color-glass-ice: #85bdee;
+```
+
+QA references:
+
+- `review/qa/logo-and-full-visual-repair/logos/logo-surface-test.png`
+- `review/qa/logo-and-full-visual-repair/logo-extraction-info.json`
 
 ## Archived Alternatives
 

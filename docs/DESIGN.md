@@ -58,6 +58,12 @@ Glass Energy Systems is building the deployment and reliability layer around pow
 --color-muted-slate: #798281;
 --color-hero-wash: #e8e7f5;
 --color-power-copper: #b97a56;
+--color-glass-blue-deep: #193a7d;
+--color-glass-blue: #4481ba;
+--color-glass-ice: #85bdee;
+--glass-edge-highlight: color-mix(in srgb, var(--color-glass-ice) 82%, var(--color-sheet-white));
+--glass-surface-dark: color-mix(in srgb, var(--color-glass-blue-deep) 38%, transparent);
+--glass-surface-light: color-mix(in srgb, var(--color-glass-ice) 18%, transparent);
 ```
 
 Color roles:
@@ -72,8 +78,21 @@ Color roles:
 - Sage Mist: dividers and borders.
 - Bark: body text.
 - Ink: major light-background headings.
+- Glass Blue Deep / Glass Blue / Glass Ice: sampled from the correct master logo and reserved for logo-derived glass edges, reflective planes and restrained architectural layer highlights.
 
 Do not introduce red, bright cyan, rainbow gradients or unrelated saturated colors.
+
+## Correct Logo System
+
+The correct-logo source for the rebuild is `references/brand/glass-logo-correct-master.jpeg`. No SVG, PDF, AI or transparent production logo source was supplied during this pass, so the production web variants are transparent PNGs extracted from the JPEG master:
+
+- `src/assets/brand/glass-logo-full-dark.png`: compact full lockup for desktop header and dark footer surfaces.
+- `src/assets/brand/glass-logo-mark-dark.png`: dark-surface mark for compact/mobile header use.
+- `src/assets/brand/glass-logo-mark-transparent.png`: transparent mark reference for controlled brand-motif use.
+
+Do not recreate `GLASS` or `ENERGY SYSTEMS` with live text, substitute a similar font, distort the panel geometry, recolor the mark into a flat blue icon or place an HTML wordmark next to a separate mark. The full lockup is used on dark desktop/footer surfaces; the mark-only variant is used in the mobile header so the wordmark is not compressed into illegibility.
+
+Existing favicons and app icons remain active until a true vector or transparent icon master is supplied. The JPEG-derived mark is clean enough for dark brand surfaces but should not replace tiny favicons by default.
 
 ## Typography
 
@@ -93,16 +112,42 @@ Use restrained line lengths, generous line height, light headline weight, minima
 ## Spacing
 
 ```text
-Maximum content width: 1200-1280px
-Major section padding: 96-140px
-Internal content gap: 24-48px
+Maximum page width: 1280px
+Maximum content width: 1180px
+Reading width: 620px
+Wide visual width: 1240px
+Standard visual width: 760px
+Major section padding: 88-152px depending on hierarchy
+Internal content gap: 24-64px
 Card padding: 24-40px
 Card radius: 16px
 Button radius: 8px
 Input radius: 4px
 ```
 
-Use one focused idea per section. Avoid masonry layouts and repetitive grids of identical cards.
+Use one focused idea per section. Do not apply one universal section padding to every chapter. Major visual chapters may be large; supporting editorial chapters must stay compact. Avoid masonry layouts and repetitive grids of identical cards.
+
+## Composition Hierarchy
+
+Treat the homepage as five major visual chapters separated by quieter editorial chapters.
+
+Major visual chapters:
+
+1. Hero system
+2. What We Are Building
+3. Service Speed
+4. System Architecture / Initial Platform
+5. Partnership CTA
+
+Supporting editorial chapters:
+
+- Why PCS First
+- Deployment Model explanation
+- Built for India principles
+- Service and Reliability
+- Development Pathway explanation
+
+System Architecture should read as the second strongest technical visual chapter after the hero. The lower editorial sections should not all become equally large hero sections.
 
 ## Radius System
 
@@ -154,6 +199,21 @@ Glass must not appear as:
 
 Glass elements should use very low opacity, thin sage or blue-green edges, minimal blur, limited highlights and two to five layers per major visual.
 
+## BrandGlassPlanes Motif
+
+`BrandGlassPlanes` is the approved reusable motif derived from the three vertical glass panels in the correct logo. It uses three offset translucent planes, sampled Glass blue edges, low-opacity interiors and restrained reflections.
+
+Use it only where it has structural meaning:
+
+- Hero power-conversion core
+- One Hero-to-Approach transition/detail layer
+- System Architecture
+- Initial Platform as a minor control layer
+- Partnership CTA
+- Subtle footer terminus
+
+Do not use it behind every card, behind all headings, as a repeating page background or as random decoration.
+
 ## Connector-Line System
 
 Use three connector types:
@@ -165,6 +225,8 @@ Violet dotted line: telemetry and diagnostics
 ```
 
 Connections should leave one section and enter the next, guide the eye down the page, become timelines, networks or card inputs, change composition between sections, remain subtle and be implemented section-by-section rather than as one fragile page-length SVG.
+
+Remove connector lines that enter empty space, terminate in floating circles without a chapter handoff, cross important copy, duplicate a line already present in a rendered asset or make mobile pages longer. On mobile, most decorative section-to-section connectors should be removed.
 
 ## Illustration Rules
 

@@ -12,8 +12,11 @@ export function ServiceReliabilitySection() {
         <Eyebrow>{serviceReliability.eyebrow}</Eyebrow>
         <h2 id="reliability-title">{serviceReliability.headline}</h2>
         <ul className="module-grid">
-          {serviceModules.map((item) => (
-            <li key={item.title}>{item.title}</li>
+          {serviceModules.map((item, index) => (
+            <li key={item.title}>
+              <span>0{index + 1}</span>
+              <strong>{item.title}</strong>
+            </li>
           ))}
         </ul>
         <p className="section-closing">{serviceReliability.closingLine}</p>

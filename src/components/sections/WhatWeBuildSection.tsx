@@ -5,6 +5,7 @@ import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
+import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function WhatWeBuildSection() {
   return (
@@ -22,6 +23,7 @@ export function WhatWeBuildSection() {
           </ul>
         </div>
         <div className="approach-visual-stack">
+          <BrandGlassPlanes size="md" quiet className="approach-glass-layer" />
           <RenderedSectionVisual
             src={approachVisual}
             alt="Rendered technical register showing PCS hardware, documentation, grid context and support readiness."

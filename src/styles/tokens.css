@@ -15,19 +15,37 @@
   --color-muted-slate: #798281;
   --color-hero-wash: #e8e7f5;
   --color-power-copper: #b97a56;
+  --color-glass-blue-deep: #193a7d;
+  --color-glass-blue: #4481ba;
+  --color-glass-ice: #85bdee;
+  --glass-edge-highlight: color-mix(in srgb, var(--color-glass-ice) 82%, var(--color-sheet-white));
+  --glass-surface-dark: color-mix(in srgb, var(--color-glass-blue-deep) 38%, transparent);
+  --glass-surface-light: color-mix(in srgb, var(--color-glass-ice) 18%, transparent);
 
   --font-brand: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
   --page-max-width: 1280px;
+  --content-max-width: 1180px;
+  --reading-width: 620px;
+  --visual-wide-width: 1240px;
+  --visual-standard-width: 760px;
   --page-gutter: clamp(20px, 4vw, 48px);
+  --section-pad-xl: clamp(112px, 10vw, 152px);
+  --section-pad-lg: clamp(88px, 8vw, 120px);
+  --section-pad-md: clamp(68px, 6vw, 96px);
+  --section-pad-sm: clamp(52px, 5vw, 72px);
+  --transition-depth: clamp(80px, 9vw, 144px);
+  --header-offset: 74px;
+  --column-gap-wide: clamp(56px, 7vw, 96px);
+  --column-gap-standard: clamp(32px, 4vw, 64px);
 
   --radius-input: 4px;
   --radius-button: 8px;
   --radius-card: 16px;
 
-  --space-section-desktop: 120px;
-  --space-section-tablet: 96px;
-  --space-section-mobile: 72px;
+  --space-section-desktop: var(--section-pad-lg);
+  --space-section-tablet: var(--section-pad-md);
+  --space-section-mobile: var(--section-pad-sm);
 
   --space-1: 4px;
   --space-2: 8px;

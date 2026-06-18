@@ -1,7 +1,8 @@
-import logoMark from "../../../assets/glass-logo-mark-96.png";
+import logoFull from "../../assets/brand/glass-logo-full-dark.png";
 import { footer, footerGroups } from "../../content/siteContent";
 import { Container } from "./Container";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
+import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function SiteFooter() {
   return (
@@ -10,11 +11,7 @@ export function SiteFooter() {
       <Container className="footer-grid">
         <div className="footer-brand">
           <a className="brand-lockup" href="#hero" aria-label="Glass Energy Systems home">
-            <img src={logoMark} alt="" width="35" height="48" />
-            <span>
-              <strong>Glass</strong>
-              <small>Energy Systems</small>
-            </span>
+            <img src={logoFull} alt="" width="154" height="64" />
           </a>
           <p>{footer.brandStatement}</p>
         </div>
@@ -37,6 +34,7 @@ export function SiteFooter() {
       </Container>
       <Container className="footer-bottom">
         <p>{footer.finalLine}</p>
+        <BrandGlassPlanes size="sm" quiet className="footer-glass-terminus" />
       </Container>
     </footer>
   );

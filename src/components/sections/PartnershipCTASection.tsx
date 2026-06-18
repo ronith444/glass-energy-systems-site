@@ -6,6 +6,7 @@ import { Button } from "../ui/Button";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
+import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function PartnershipCTASection() {
   return (
@@ -23,12 +24,15 @@ export function PartnershipCTASection() {
             </Button>
           </div>
         </div>
-        <RenderedSectionVisual
-          src={partnershipVisual}
-          alt="Glass panel structure resolving the deployment connector into a partner handoff."
-          aspectRatio="1491 / 1055"
-          className="partnership-render"
-        />
+        <div className="partnership-visual-field">
+          <BrandGlassPlanes size="lg" className="partnership-glass-sculpture" />
+          <RenderedSectionVisual
+            src={partnershipVisual}
+            alt="Glass panel structure resolving the deployment connector into a partner handoff."
+            aspectRatio="1491 / 1055"
+            className="partnership-render"
+          />
+        </div>
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>

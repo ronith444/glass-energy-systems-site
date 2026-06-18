@@ -5,6 +5,7 @@ import { Section } from "../layout/Section";
 import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
+import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function SystemArchitectureSection() {
   return (
@@ -22,12 +23,15 @@ export function SystemArchitectureSection() {
             ))}
           </ul>
         </div>
-        <RenderedSectionVisual
-          src={architectureVisual}
-          alt="Open system architecture network centered on power conversion with battery, controls, grid, diagnostics and C&I application nodes."
-          aspectRatio="1491 / 1055"
-          className="architecture-render"
-        />
+        <div className="architecture-visual-field">
+          <BrandGlassPlanes size="lg" quiet className="architecture-glass-layer" />
+          <RenderedSectionVisual
+            src={architectureVisual}
+            alt="Open system architecture network centered on power conversion with battery, controls, grid, diagnostics and C&I application nodes."
+            aspectRatio="1491 / 1055"
+            className="architecture-render"
+          />
+        </div>
       </Container>
       <ConnectorAnchor position="exit" />
     </Section>
