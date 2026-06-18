@@ -9,7 +9,7 @@ import { HeroSystemDiagram } from "../diagrams/HeroSystemDiagram";
 export function HeroSection() {
   return (
     <Section id={hero.id} surface="hero" labelledBy="hero-title" className="hero-section">
-      <Container className="hero-grid">
+      <Container className="hero-layout">
         <div className="hero-copy">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
           <h1 id="hero-title">{hero.headline}</h1>

@@ -48,12 +48,34 @@ export const whatWeBuild = {
   body: "A PCS specification alone does not make a storage project deployable. Real execution also requires verified hardware, complete documentation, working communication protocols, disciplined commissioning and support when the system enters the field.",
 } satisfies SectionCopy;
 
-export const capabilities: ListItem[] = [
-  { title: "PCS integration" },
-  { title: "FAT and documentation" },
-  { title: "Commissioning and interoperability" },
-  { title: "Hypercare, diagnostics and spares" },
+export const approachOutcomes: ListItem[] = [
+  { title: "Grid-ready by design" },
+  { title: "Engineered for reliability" },
+  { title: "Built for scale, supported for life" },
 ];
+
+export const capabilities = [
+  {
+    title: "PCS integration",
+    body: "Align PCS hardware, BMS, EMS and protection requirements around a repeatable 100kW path.",
+    status: "Integrated",
+  },
+  {
+    title: "FAT and documentation",
+    body: "Structure FAT support, supplier documents, protocol maps and fault-code review before site work.",
+    status: "Verified",
+  },
+  {
+    title: "Commissioning and interoperability",
+    body: "Connect communication expectations across CAN, Modbus, Ethernet and India grid context.",
+    status: "Connected",
+  },
+  {
+    title: "Hypercare, diagnostics and spares",
+    body: "Plan diagnostics, issue tracking, warranty paths and critical spares around early field operation.",
+    status: "Supported",
+  },
+] satisfies Array<ListItem & { status: string }>;
 
 export const serviceSpeed = {
   id: "service-speed",

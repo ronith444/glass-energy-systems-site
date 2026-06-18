@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Frontend reset foundation complete.
+Opening Arcadia visual-fidelity pass complete.
 
 ## Completed
 
@@ -31,15 +31,24 @@ Frontend reset foundation complete.
 - Semantic page skeleton implemented.
 - Surface progression implemented.
 - Connector foundation implemented.
+- Header visual implementation completed.
+- Hero desktop implementation completed.
+- Hero system diagram completed.
+- Hero-to-Approach connector completed.
+- What We Are Building implementation completed.
+- Opening responsive baseline completed.
+- Opening screenshot comparison completed.
 
 ## Not Started
 
 - Repository cleanup
-- Pixel-perfect desktop implementation
-- Final SVG illustrations
-- Screenshot comparison
-- Tablet refinement
-- Mobile refinement
+- Full-page pixel-perfect desktop implementation
+- Service Speed detailed implementation
+- Lower-section detailed implementation
+- Final SVG illustrations beyond the opening sections
+- Full-page screenshot comparison
+- Full tablet refinement
+- Full mobile refinement
 - Motion
 - Staging
 - Production launch

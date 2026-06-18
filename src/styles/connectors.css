@@ -1,6 +1,6 @@
 .connector-anchor {
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   display: block;
   pointer-events: none;
 }
@@ -9,37 +9,87 @@
 .connector-exit {
   left: var(--connector-center-x);
   width: 1px;
-  height: 72px;
   background: color-mix(in srgb, var(--color-mint-pulse) 62%, transparent);
 }
 
 .connector-entry {
   top: var(--connector-entry-y);
+  height: 96px;
 }
 
 .connector-exit {
   bottom: 0;
+  height: 96px;
 }
 
 .connector-entry::after,
 .connector-exit::after {
   position: absolute;
   left: 50%;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   content: "";
-  border: 1px solid color-mix(in srgb, var(--color-mint-pulse) 82%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-mint-pulse) 88%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--color-sheet-white) 42%, transparent);
+  background: color-mix(in srgb, var(--color-dark-canopy) 72%, transparent);
   transform: translateX(-50%);
 }
 
 .connector-entry::after {
-  top: 64px;
+  bottom: 0;
 }
 
 .connector-exit::after {
   bottom: 0;
+}
+
+.hero-section .connector-exit {
+  height: 86px;
+}
+
+.approach-section .connector-entry {
+  height: clamp(100px, 12vw, 148px);
+}
+
+.approach-section .connector-exit {
+  height: 90px;
+}
+
+.approach-section .connector-entry::before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: clamp(190px, 23vw, 360px);
+  height: 1px;
+  content: "";
+  background: color-mix(in srgb, var(--color-mint-pulse) 44%, transparent);
+}
+
+.approach-panel::before,
+.approach-panel::after {
+  position: absolute;
+  pointer-events: none;
+  content: "";
+}
+
+.approach-panel::before {
+  top: 48%;
+  left: -118px;
+  width: 120px;
+  height: 72px;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-power-copper) 66%, transparent);
+  border-left: 1px solid color-mix(in srgb, var(--color-power-copper) 66%, transparent);
+  border-radius: 0 0 0 18px;
+}
+
+.approach-panel::after {
+  right: -74px;
+  bottom: 18%;
+  width: 120px;
+  height: 84px;
+  border-top: 1px dotted color-mix(in srgb, var(--color-orb-violet) 64%, transparent);
+  border-right: 1px dotted color-mix(in srgb, var(--color-orb-violet) 64%, transparent);
+  border-radius: 0 18px 0 0;
 }
 
 .connector-left {
@@ -84,13 +134,39 @@
   border-color: var(--color-orb-violet);
 }
 
-@media (max-width: 640px) {
+@media (max-width: 1024px) {
+  .approach-section .connector-entry::before {
+    width: 1px;
+  }
+
+  .approach-panel::before {
+    left: 50%;
+    top: -70px;
+    width: 1px;
+    height: 70px;
+    border: 0;
+    background: color-mix(in srgb, var(--color-mint-pulse) 44%, transparent);
+  }
+
+  .approach-panel::after {
+    right: 12%;
+  }
+}
+
+@media (max-width: 760px) {
   .connector-entry,
   .connector-exit {
     left: 50%;
-    height: 48px;
+    height: 56px;
   }
 
+  .approach-section .connector-entry {
+    height: 72px;
+  }
+
+  .approach-section .connector-entry::before,
+  .approach-panel::before,
+  .approach-panel::after,
   .connector-copper,
   .connector-violet {
     display: none;
