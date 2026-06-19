@@ -224,6 +224,28 @@ Current chapter structure:
 
 The transition must be gradual rather than switching abruptly from dark to white.
 
+## Section Surface Crossfades
+
+Chapter transitions are direct, opaque surface crossfades owned by the incoming section. Do not use blurred bands, backdrop filters, box shadows, transparent gradient endpoints, or empty spacer sections to hide a section boundary.
+
+Current incoming-section owners:
+
+- `.service-speed-conclusion`: Service Speed sage to Cream Paper.
+- `#service-reliability`: Built for India pale sage to warm editorial white.
+- `#partners`: Development Pathway cream to deep evergreen CTA.
+
+Transition rules:
+
+- Start with the measured outgoing surface color and finish with the measured incoming surface color.
+- Use two intermediate colors within the existing sage, cream, warm-white, and evergreen palette.
+- Keep desktop transition depths controlled: `180px` for Service Speed to conclusion, `128px` for Built for India to Reliability, and `220px` for Development to CTA.
+- Keep mobile depths shorter: `96px`, `72px`, and `112px`, with smaller reductions below `480px`.
+- Apply `margin-top: -1px` to the incoming owner to prevent one-pixel seams.
+- Place text only after the transition reaches a stable, readable surface.
+- Footer remains a continuous extension of the Partnership CTA dark surface.
+
+When changing chapter colors, remeasure the rendered boundary colors from screenshots or browser pixels and update the crossfade variables rather than guessing from token names.
+
 ## Glass Electronics Motif
 
 Glass should appear as:
