@@ -3,14 +3,12 @@ import { developmentPathway, developmentStages } from "../../content/siteContent
 import { DevelopmentTimeline } from "../diagrams/DevelopmentTimeline";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function DevelopmentPathwaySection() {
   return (
     <Section id={developmentPathway.id} surface="cream" labelledBy="development-title">
-      <ConnectorAnchor position="entry" />
       <Container className="rendered-process-section development-render-section">
         <div className="section-heading-block">
           <Eyebrow>{developmentPathway.eyebrow}</Eyebrow>
@@ -25,7 +23,6 @@ export function DevelopmentPathwaySection() {
         <DevelopmentTimeline stages={developmentStages} />
         <p className="disclaimer">{developmentPathway.disclaimer}</p>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

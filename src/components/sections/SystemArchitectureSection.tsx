@@ -2,15 +2,12 @@ import architectureVisual from "../../assets/visuals/06-system-architecture.webp
 import { architectureNodes, systemArchitecture } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
-import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function SystemArchitectureSection() {
   return (
     <Section id={systemArchitecture.id} surface="sage" labelledBy="architecture-title">
-      <ConnectorAnchor position="entry" />
       <Container className="architecture-render-layout">
         <div>
           <Eyebrow>{systemArchitecture.eyebrow}</Eyebrow>
@@ -24,7 +21,6 @@ export function SystemArchitectureSection() {
           </ul>
         </div>
         <div className="architecture-visual-field">
-          <BrandGlassPlanes size="lg" quiet className="architecture-glass-layer" />
           <RenderedSectionVisual
             src={architectureVisual}
             alt="Open system architecture network centered on power conversion with battery, controls, grid, diagnostics and C&I application nodes."
@@ -33,7 +29,6 @@ export function SystemArchitectureSection() {
           />
         </div>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

@@ -3,7 +3,6 @@ import { servicePrinciples, serviceSpeed } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function ServiceSpeedSection() {
@@ -14,7 +13,6 @@ export function ServiceSpeedSection() {
       labelledBy="service-speed-title"
       className="service-speed-section"
     >
-      <ConnectorAnchor position="entry" />
       <Container className="service-speed-layout">
         <div className="service-speed-copy">
           <Eyebrow>{serviceSpeed.eyebrow}</Eyebrow>
@@ -37,7 +35,6 @@ export function ServiceSpeedSection() {
         </ol>
         <p className="section-highlight">{serviceSpeed.highlight}</p>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

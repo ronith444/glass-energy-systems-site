@@ -17,19 +17,31 @@ export default function App() {
     <>
       <SiteHeader />
       <main>
-        <HeroSection />
-        <WhatWeBuildSection />
-        <ServiceSpeedSection />
-        <WhyPCSSection />
-        <DeploymentModelSection />
-        <SystemArchitectureSection />
-        <InitialPlatformSection />
-        <BuiltForIndiaSection />
-        <ServiceReliabilitySection />
-        <DevelopmentPathwaySection />
-        <PartnershipCTASection />
+        <div className="chapter chapter-dark">
+          <HeroSection />
+          <WhatWeBuildSection />
+          <ServiceSpeedSection />
+        </div>
+        <div className="chapter chapter-light">
+          <WhyPCSSection />
+          <DeploymentModelSection />
+        </div>
+        <div className="chapter chapter-technical">
+          <SystemArchitectureSection />
+          <InitialPlatformSection />
+          <BuiltForIndiaSection />
+        </div>
+        <div className="chapter chapter-editorial">
+          <ServiceReliabilitySection />
+          <DevelopmentPathwaySection />
+        </div>
+        <div className="chapter chapter-closing">
+          <PartnershipCTASection />
+        </div>
       </main>
-      <SiteFooter />
+      <div className="chapter chapter-closing chapter-footer">
+        <SiteFooter />
+      </div>
     </>
   );
 }

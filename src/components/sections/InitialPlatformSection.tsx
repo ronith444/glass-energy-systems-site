@@ -2,15 +2,12 @@ import initialPlatformVisual from "../../assets/visuals/07-initial-platform.webp
 import { initialPlatform, initialSpecs } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
-import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function InitialPlatformSection() {
   return (
     <Section id={initialPlatform.id} surface="cream" labelledBy="initial-platform-title">
-      <ConnectorAnchor position="entry" />
       <Container className="initial-platform-layout">
         <div className="initial-platform-copy">
           <Eyebrow>{initialPlatform.eyebrow}</Eyebrow>
@@ -24,7 +21,6 @@ export function InitialPlatformSection() {
           <p className="disclaimer">{initialPlatform.disclaimer}</p>
         </div>
         <div className="initial-platform-visual-field">
-          <BrandGlassPlanes size="sm" quiet className="initial-glass-layer" />
           <RenderedSectionVisual
             src={initialPlatformVisual}
             alt="Conceptual system architecture showing PCS controls, storage, grid and C&I loads."
@@ -33,7 +29,6 @@ export function InitialPlatformSection() {
           />
         </div>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

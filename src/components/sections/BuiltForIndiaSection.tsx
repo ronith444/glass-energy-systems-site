@@ -2,14 +2,12 @@ import builtForIndiaVisual from "../../assets/visuals/08-built-for-india.webp";
 import { builtForIndia, indiaPoints } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function BuiltForIndiaSection() {
   return (
     <Section id={builtForIndia.id} surface="sage" labelledBy="india-title">
-      <ConnectorAnchor position="entry" />
       <Container className="built-india-layout">
         <RenderedSectionVisual
           src={builtForIndiaVisual}
@@ -27,7 +25,6 @@ export function BuiltForIndiaSection() {
           </ul>
         </div>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

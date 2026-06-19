@@ -30,11 +30,10 @@
   --visual-wide-width: 1240px;
   --visual-standard-width: 760px;
   --page-gutter: clamp(20px, 4vw, 48px);
-  --section-pad-xl: clamp(112px, 10vw, 152px);
-  --section-pad-lg: clamp(88px, 8vw, 120px);
-  --section-pad-md: clamp(68px, 6vw, 96px);
-  --section-pad-sm: clamp(52px, 5vw, 72px);
-  --transition-depth: clamp(80px, 9vw, 144px);
+  --section-major: clamp(96px, 8vw, 128px);
+  --section-standard: clamp(72px, 6vw, 96px);
+  --section-compact: clamp(56px, 5vw, 76px);
+  --chapter-transition: clamp(80px, 8vw, 120px);
   --header-offset: 74px;
   --column-gap-wide: clamp(56px, 7vw, 96px);
   --column-gap-standard: clamp(32px, 4vw, 64px);
@@ -42,10 +41,6 @@
   --radius-input: 4px;
   --radius-button: 8px;
   --radius-card: 16px;
-
-  --space-section-desktop: var(--section-pad-lg);
-  --space-section-tablet: var(--section-pad-md);
-  --space-section-mobile: var(--section-pad-sm);
 
   --space-1: 4px;
   --space-2: 8px;
@@ -64,9 +59,4 @@
   --text-eyebrow: 0.8125rem;
   --text-meta: 0.875rem;
 
-  --connector-center-x: 50%;
-  --connector-left-x: 18%;
-  --connector-right-x: 82%;
-  --connector-entry-y: 0;
-  --connector-exit-y: 100%;
 }

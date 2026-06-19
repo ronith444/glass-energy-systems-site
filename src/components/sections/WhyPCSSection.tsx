@@ -2,12 +2,10 @@ import { pcsReasons, whyPcs } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 
 export function WhyPCSSection() {
   return (
     <Section id={whyPcs.id} surface="cream" labelledBy="why-pcs-title" className="why-pcs-entry-section">
-      <ConnectorAnchor position="entry" />
       <Container className="why-pcs-entry">
         <div className="why-pcs-copy">
           <Eyebrow>{whyPcs.eyebrow}</Eyebrow>
@@ -23,7 +21,6 @@ export function WhyPCSSection() {
           ))}
         </ul>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }

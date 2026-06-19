@@ -4,10 +4,8 @@ import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
-import { ConnectorAnchor } from "../ui/ConnectorAnchor";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 import { TechnicalLabel } from "../ui/TechnicalLabel";
-import { BrandGlassPlanes } from "../ui/BrandGlassPlanes";
 
 export function HeroSection() {
   return (
@@ -25,7 +23,6 @@ export function HeroSection() {
           </div>
         </div>
         <div className="hero-rendered-system">
-          <BrandGlassPlanes size="lg" quiet className="hero-glass-core" />
           <RenderedSectionVisual
             src={heroSystemVisual}
             alt="Conceptual PCS-centered system linking grid interface, power conversion, storage and C&I application."
@@ -41,7 +38,6 @@ export function HeroSection() {
           </div>
         </div>
       </Container>
-      <ConnectorAnchor position="exit" />
     </Section>
   );
 }
