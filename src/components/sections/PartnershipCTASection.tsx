@@ -1,4 +1,4 @@
-import partnershipVisual from "../../assets/visuals/11-partnership-glass-mark.webp";
+import partnershipVisual from "../../assets/brand/glass-logo-full-dark.png";
 import { partnershipCta } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
@@ -24,7 +24,7 @@ export function PartnershipCTASection() {
         <div className="partnership-visual-field">
           <RenderedSectionVisual
             src={partnershipVisual}
-            alt="Abstract layered glass sculpture representing a supported pilot handoff."
+            alt="Glass Energy Systems logo."
             aspectRatio="1491 / 1055"
             className="partnership-render"
           />

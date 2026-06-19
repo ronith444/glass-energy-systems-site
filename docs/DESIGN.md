@@ -169,7 +169,7 @@ Mobile rules:
 - Reset rendered technical visuals to `width: 100%`, `height: auto`, `object-fit: contain`, `object-position: center`, and no transforms.
 - Preserve important copy as semantic HTML and keep every section readable without horizontal scrolling.
 - Keep only the approved mobile glass surfaces: hero secondary CTA, hero technical rail, capability panel, service process panel, architecture legend, initial specification console, partnership secondary CTA, and mobile menu.
-- Use the compact mark-only logo in the mobile header and the full lockup in the footer.
+- Use the actual full logo lockup in the mobile header when it remains readable, and the full lockup in the footer.
 - Mobile section order is:
   - Hero: copy, CTAs, complete system visual, technical rail.
   - What We Are Building: copy, outcomes, technical image, capability panel.
@@ -219,32 +219,33 @@ Current chapter structure:
 1. Dark systems story: Hero, What We Are Building, Service Speed.
 2. Light deployment story: Why PCS First, Deployment Model.
 3. Technical architecture story: System Architecture, Initial Platform, Built for India.
-4. Reliability and roadmap: Service and Reliability, Development Pathway.
-5. Dark close: Partnership CTA and Footer in one uninterrupted surface.
+4. Reliability editorial story: Service and Reliability.
+5. Closing scene: Development Pathway, Partnership CTA and Footer in one continuous cream-to-dark atmosphere.
 
 The transition must be gradual rather than switching abruptly from dark to white.
 
-## Section Surface Crossfades
+## Atmospheric Scene Backgrounds
 
-Chapter transitions are direct, opaque surface crossfades owned by the incoming section. Do not use blurred bands, backdrop filters, box shadows, transparent gradient endpoints, or empty spacer sections to hide a section boundary.
+Chapter transitions should feel like shared atmospheres, not strips inserted between sections. Do not use empty transition blocks, global connector fillers, CSS filter blur, backdrop-filter, box-shadow, transparent gradient endpoints, or isolated decorative bands to hide a section boundary.
 
-Current incoming-section owners:
+Current scene owners:
 
-- `.service-speed-conclusion`: Service Speed sage to Cream Paper.
-- `#service-reliability`: Built for India pale sage to warm editorial white.
-- `#partners`: Development Pathway cream to deep evergreen CTA.
+- `.service-speed-section`: owns the full dark-to-cream Service Speed scene, including copy, render, process panel, conclusion statement and the exit into Why PCS First.
+- `.development-closing-scene`: wraps Development Pathway, Partnership CTA and Footer as one cream-to-dark closing scene.
+- `#partners`: may add a short section-local darkening gradient so white CTA copy lands on a readable deep evergreen surface.
+- `#service-reliability`: keeps a compact opaque crossfade from Built for India into the editorial reliability chapter.
 
 Transition rules:
 
 - Start with the measured outgoing surface color and finish with the measured incoming surface color.
-- Use two intermediate colors within the existing sage, cream, warm-white, and evergreen palette.
-- Keep desktop transition depths controlled: `180px` for Service Speed to conclusion, `128px` for Built for India to Reliability, and `220px` for Development to CTA.
-- Keep mobile depths shorter: `96px`, `72px`, and `112px`, with smaller reductions below `480px`.
-- Apply `margin-top: -1px` to the incoming owner to prevent one-pixel seams.
-- Place text only after the transition reaches a stable, readable surface.
+- Use only solid colors from the existing sage, cream, warm-white and evergreen palette.
+- Keep desktop transitions atmospheric but bounded; no unexplained visual dead zone may exceed `160px`.
+- Keep mobile transitions shorter and content-led; decorative transition space must not make the page feel longer.
+- Use `margin-top: -1px` only to prevent one-pixel seams, never as layout compensation.
+- Place text only after the surface reaches readable contrast.
 - Footer remains a continuous extension of the Partnership CTA dark surface.
 
-When changing chapter colors, remeasure the rendered boundary colors from screenshots or browser pixels and update the crossfade variables rather than guessing from token names.
+When changing chapter colors, remeasure the rendered boundary colors from screenshots or browser pixels and update scene gradients rather than guessing from token names.
 
 ## Glass Electronics Motif
 
@@ -268,20 +269,11 @@ Glass must not appear as:
 
 Glass elements should use very low opacity, thin sage or blue-green edges, minimal blur, limited highlights and two to five layers per major visual.
 
-## BrandGlassPlanes Motif
+## Logo-Derived Glass Motif
 
-`BrandGlassPlanes` is the approved reusable motif derived from the three vertical glass panels in the correct logo. It uses three offset translucent planes, sampled Glass blue edges, low-opacity interiors and restrained reflections.
+The three-panel Glass mark informs the rendered visual language, but the website should not render standalone three-panel decorative watermarks or repeated `BrandGlassPlanes` overlays. Use logo-derived glass geometry only when it is part of a real rendered asset, the header/footer logo system or a future intentional technical diagram.
 
-Use it only where it has structural meaning:
-
-- Hero power-conversion core
-- One Hero-to-Approach transition/detail layer
-- System Architecture
-- Initial Platform as a minor control layer
-- Partnership CTA
-- Subtle footer terminus
-
-Do not use it behind every card, behind all headings, as a repeating page background or as random decoration.
+Do not use the logo geometry behind headings, as a page background, as a footer watermark, as a transition filler or as random decoration.
 
 ## Connector-Line System
 

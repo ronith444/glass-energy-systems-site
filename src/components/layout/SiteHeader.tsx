@@ -1,6 +1,5 @@
 import { useState } from "react";
 import logoFull from "../../assets/brand/glass-logo-full-dark.png";
-import logoMark from "../../assets/brand/glass-logo-mark-dark.png";
 import { navigation, primaryCta } from "../../content/siteContent";
 import { Button } from "../ui/Button";
 
@@ -11,10 +10,7 @@ export function SiteHeader() {
     <header className="site-header">
       <div className="site-header-inner">
         <a className="brand-lockup" href="#hero" aria-label="Glass Energy Systems home">
-          <picture>
-            <source media="(max-width: 640px)" srcSet={logoMark} />
-            <img src={logoFull} alt="" width="154" height="64" />
-          </picture>
+          <img src={logoFull} alt="" width="154" height="64" />
         </a>
         <button
           className="menu-toggle"

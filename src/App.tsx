@@ -33,9 +33,9 @@ export default function App() {
         </div>
         <div className="chapter chapter-editorial">
           <ServiceReliabilitySection />
-          <DevelopmentPathwaySection />
         </div>
-        <div className="chapter chapter-closing">
+        <div className="development-closing-scene">
+          <DevelopmentPathwaySection />
           <PartnershipCTASection />
           <SiteFooter />
         </div>
