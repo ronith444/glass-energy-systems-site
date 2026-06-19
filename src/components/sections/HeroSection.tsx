@@ -4,8 +4,8 @@ import { Button } from "../ui/Button";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
+import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
-import { TechnicalLabel } from "../ui/TechnicalLabel";
 
 export function HeroSection() {
   return (
@@ -31,11 +31,18 @@ export function HeroSection() {
             fetchPriority="high"
             loading="eager"
           />
-          <div className="technical-labels" aria-label="Technical focus">
+          <LiquidGlassSurface
+            className="technical-labels hero-technical-rail"
+            aria-label="Technical focus"
+            density="compact"
+            radius={12}
+          >
             {technicalLabels.map((item) => (
-              <TechnicalLabel key={item.label}>{item.label}</TechnicalLabel>
+              <span className="technical-label" key={item.label}>
+                {item.label}
+              </span>
             ))}
-          </div>
+          </LiquidGlassSurface>
         </div>
       </Container>
     </Section>

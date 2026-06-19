@@ -3,6 +3,7 @@ import { initialPlatform, initialSpecs } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
+import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function InitialPlatformSection() {
@@ -13,11 +14,17 @@ export function InitialPlatformSection() {
           <Eyebrow>{initialPlatform.eyebrow}</Eyebrow>
           <h2 id="initial-platform-title">{initialPlatform.headline}</h2>
           <p className="visual-qualifier">Conceptual system architecture</p>
-          <ul className="spec-strip">
+          <LiquidGlassSurface
+            as="ul"
+            className="spec-strip initial-spec-console"
+            variant="light"
+            aria-label="Initial platform specifications"
+            radius={12}
+          >
             {initialSpecs.map((item) => (
               <li key={item.title}>{item.title}</li>
             ))}
-          </ul>
+          </LiquidGlassSurface>
           <p className="disclaimer">{initialPlatform.disclaimer}</p>
         </div>
         <div className="initial-platform-visual-field">

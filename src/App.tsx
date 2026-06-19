@@ -37,11 +37,9 @@ export default function App() {
         </div>
         <div className="chapter chapter-closing">
           <PartnershipCTASection />
+          <SiteFooter />
         </div>
       </main>
-      <div className="chapter chapter-closing chapter-footer">
-        <SiteFooter />
-      </div>
     </>
   );
 }

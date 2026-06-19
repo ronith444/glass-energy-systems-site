@@ -26,6 +26,10 @@ h2 {
   font-size: var(--text-section);
 }
 
+section[id] {
+  scroll-margin-top: calc(var(--header-offset) + 24px);
+}
+
 h3 {
   font-size: 1.05rem;
   font-weight: 600;

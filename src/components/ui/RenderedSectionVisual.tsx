@@ -21,7 +21,7 @@ export function RenderedSectionVisual({
   className,
   decorative = false,
   fetchPriority,
-  loading = "eager",
+  loading = "lazy",
 }: RenderedSectionVisualProps) {
   return (
     <figure

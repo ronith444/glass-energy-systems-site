@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Correct brand system and full visual integration refinement pass complete.
+Final UI, asset integration, liquid-glass and responsive polish complete.
 
 ## Completed
 
@@ -81,6 +81,15 @@ Correct brand system and full visual integration refinement pass complete.
 - Connector reduction pass completed.
 - Mobile header and logo behavior verified.
 - Logo and full visual repair screenshot review completed.
+- Final UI composition pass completed.
+- Restrained liquid-glass component implemented.
+- Approved liquid-glass surfaces integrated.
+- CTA and Footer unified into one closing chapter.
+- Rendered asset edge-color sampling completed.
+- Final section-owned image crop logic completed.
+- Initial Platform dedicated QA completed.
+- Final responsive polish completed.
+- Final liquid-glass screenshot review completed.
 
 ## Not Started
 
@@ -88,8 +97,6 @@ Correct brand system and full visual integration refinement pass complete.
 - Full-page pixel-perfect desktop implementation
 - Final copy changes beyond approved content
 - Final bespoke SVG refinements beyond rendered WebP support
-- Final tablet polish refinement
-- Final mobile polish refinement
 - Motion
 - Staging
 - Production launch

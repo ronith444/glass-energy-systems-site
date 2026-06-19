@@ -26,17 +26,23 @@
 
   --page-max-width: 1280px;
   --content-max-width: 1180px;
-  --reading-width: 620px;
+  --reading-width: 680px;
   --visual-wide-width: 1240px;
-  --visual-standard-width: 760px;
+  --visual-standard-width: 820px;
   --page-gutter: clamp(20px, 4vw, 48px);
-  --section-major: clamp(96px, 8vw, 128px);
-  --section-standard: clamp(72px, 6vw, 96px);
-  --section-compact: clamp(56px, 5vw, 76px);
-  --chapter-transition: clamp(80px, 8vw, 120px);
-  --header-offset: 74px;
-  --column-gap-wide: clamp(56px, 7vw, 96px);
-  --column-gap-standard: clamp(32px, 4vw, 64px);
+  --section-hero-top: clamp(40px, 4vw, 56px);
+  --section-major: clamp(88px, 7vw, 112px);
+  --section-standard: clamp(72px, 5.5vw, 92px);
+  --section-compact: clamp(56px, 4.5vw, 72px);
+  --transition-short: clamp(64px, 5vw, 80px);
+  --transition-standard: clamp(72px, 6vw, 96px);
+  --chapter-transition: var(--transition-standard);
+  --header-offset: 76px;
+  --column-gap-wide: clamp(56px, 6vw, 88px);
+  --column-gap-standard: clamp(36px, 4vw, 56px);
+  --glass-radius-compact: 10px;
+  --glass-radius-standard: 12px;
+  --glass-radius-large: 14px;
 
   --radius-input: 4px;
   --radius-button: 8px;

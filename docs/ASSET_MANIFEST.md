@@ -133,6 +133,24 @@ Imported section visuals under `src/assets/visuals/` are production WebP illustr
 | `src/assets/visuals/10-development-pathway.webp` | Development Pathway | 1672x941 | 55.1 KB | INTEGRATED | Supports build-sequence section; timeline text remains HTML. |
 | `src/assets/visuals/11-partnership-glass-mark.webp` | Partnership CTA | 1491x1055 | 58.7 KB | INTEGRATED | Supports final partner handoff CTA. |
 
+## Rendered Asset Edge Sampling
+
+Final UI integration samples each production WebP edge from `review/qa/final-ui-liquid-glass/ASSET_EDGE_COLORS.json` and uses those values to tune section surfaces, image backgrounds and edge masks. The source assets are unchanged.
+
+Key sampled edges:
+
+- Hero top `#182520`, bottom `#0c211f`.
+- Approach top `#152623`, left `#23332f`.
+- Service Speed top `#11211e`, bottom `#eadecb`.
+- Deployment edges `#f3efea`.
+- System Architecture left `#e6e4d6`, right `#e0dcce`.
+- Initial Platform edges `#f5efe9`.
+- Built for India bottom `#d3d6c8`.
+- Development Pathway edges `#f7f1ea`.
+- Partnership CTA top `#081412`, right `#071616`.
+
+Image crop logic remains section-owned in CSS. `RenderedSectionVisual` stays neutral; it does not impose generic shadows, masks, glows or crop behavior.
+
 ## Files That Must Not Be Used in the Rebuild
 
 - Old red and black gaming-style concepts.

@@ -3,6 +3,7 @@ import { architectureNodes, systemArchitecture } from "../../content/siteContent
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
+import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function SystemArchitectureSection() {
@@ -12,13 +13,19 @@ export function SystemArchitectureSection() {
         <div>
           <Eyebrow>{systemArchitecture.eyebrow}</Eyebrow>
           <h2 id="architecture-title">{systemArchitecture.headline}</h2>
-          <ul className="architecture-node-list">
+          <LiquidGlassSurface
+            as="ul"
+            className="architecture-node-list"
+            variant="light"
+            aria-label="Architecture legend"
+            radius={12}
+          >
             {architectureNodes.map((node) => (
               <li key={node.title} data-kind={node.kind}>
                 {node.title}
               </li>
             ))}
-          </ul>
+          </LiquidGlassSurface>
         </div>
         <div className="architecture-visual-field">
           <RenderedSectionVisual

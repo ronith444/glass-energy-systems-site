@@ -163,6 +163,23 @@ Surfaces should feel editorial and precise:
 - surface layering should clarify system hierarchy
 - avoid heavy blur, heavy shadows and cards nested inside cards
 
+## Restrained Liquid-Glass System
+
+Liquid glass is a functional UI material, not a page background or decorative theme. It is approved only for:
+
+- Hero secondary CTA.
+- Hero technical specification rail.
+- What We Are Building capability panel.
+- Service Speed process strip.
+- System Architecture legend.
+- Initial Platform specification console.
+- Partnership CTA secondary button.
+- Mobile navigation menu.
+
+Dark liquid glass uses restrained evergreen transparency, a cool blue-gray border, a single upper-edge highlight, 10-12px blur and 10-14px radius. Light liquid glass uses warm translucent white, sage dividers, 14px blur and the same radius range. Fallbacks must remain opaque enough to read when `backdrop-filter` is unsupported.
+
+Do not use liquid glass for whole sections, long paragraphs, every list item, Footer, Why PCS First, Deployment Model, Built for India, Service and Reliability, or Development Pathway.
+
 ## Dark-to-Light Page Progression
 
 The homepage should progress through:
@@ -174,6 +191,14 @@ The homepage should progress through:
 5. Sheet White and pale-sage technical sections
 6. Dark partnership CTA
 7. Dark footer
+
+Current chapter structure:
+
+1. Dark systems story: Hero, What We Are Building, Service Speed.
+2. Light deployment story: Why PCS First, Deployment Model.
+3. Technical architecture story: System Architecture, Initial Platform, Built for India.
+4. Reliability and roadmap: Service and Reliability, Development Pathway.
+5. Dark close: Partnership CTA and Footer in one uninterrupted surface.
 
 The transition must be gradual rather than switching abruptly from dark to white.
 

@@ -3,6 +3,7 @@ import { approachOutcomes, capabilities, whatWeBuild } from "../../content/siteC
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
+import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function WhatWeBuildSection() {
@@ -26,7 +27,12 @@ export function WhatWeBuildSection() {
             aspectRatio="1491 / 1055"
             className="approach-render"
           />
-          <ul className="capability-list rendered-capability-list" aria-label="Glass capability workflow">
+          <LiquidGlassSurface
+            as="ul"
+            className="capability-list rendered-capability-list"
+            aria-label="Glass capability workflow"
+            radius={14}
+          >
             {capabilities.map((item) => (
               <li key={item.title}>
                 <span>
@@ -39,7 +45,7 @@ export function WhatWeBuildSection() {
                 </small>
               </li>
             ))}
-          </ul>
+          </LiquidGlassSurface>
         </div>
       </Container>
     </Section>

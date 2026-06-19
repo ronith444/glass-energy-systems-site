@@ -3,6 +3,7 @@ import { servicePrinciples, serviceSpeed } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";
 import { Eyebrow } from "../ui/Eyebrow";
+import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
 export function ServiceSpeedSection() {
@@ -13,28 +14,41 @@ export function ServiceSpeedSection() {
       labelledBy="service-speed-title"
       className="service-speed-section"
     >
-      <Container className="service-speed-layout">
-        <div className="service-speed-copy">
-          <Eyebrow>{serviceSpeed.eyebrow}</Eyebrow>
-          <h2 id="service-speed-title">{serviceSpeed.headline}</h2>
-          <p>{serviceSpeed.body}</p>
-        </div>
-        <RenderedSectionVisual
-          src={serviceSpeedVisual}
-          alt="Connected service process from fault ownership through technical triage, spares and hypercare."
-          aspectRatio="1672 / 941"
-          className="service-speed-render"
-        />
-        <ol className="service-process" aria-label="Service speed process">
-          {servicePrinciples.map((item, index) => (
-            <li key={item.title} className={`service-stage service-stage-${index + 1}`}>
-              <span className="service-stage-index">0{index + 1}</span>
-              <strong>{item.title}</strong>
-            </li>
-          ))}
-        </ol>
-        <p className="section-highlight">{serviceSpeed.highlight}</p>
-      </Container>
+      <div className="service-speed-main">
+        <Container className="service-speed-layout">
+          <div className="service-speed-copy">
+            <Eyebrow>{serviceSpeed.eyebrow}</Eyebrow>
+            <h2 id="service-speed-title">{serviceSpeed.headline}</h2>
+            <p>{serviceSpeed.body}</p>
+          </div>
+          <div className="service-speed-visual-column">
+            <RenderedSectionVisual
+              src={serviceSpeedVisual}
+              alt="Connected service process from fault ownership through technical triage, spares and hypercare."
+              aspectRatio="1672 / 941"
+              className="service-speed-render"
+            />
+            <LiquidGlassSurface
+              as="ol"
+              className="service-process service-speed-process"
+              aria-label="Service speed process"
+              radius={12}
+            >
+              {servicePrinciples.map((item, index) => (
+                <li key={item.title} className={`service-stage service-stage-${index + 1}`}>
+                  <span className="service-stage-index">0{index + 1}</span>
+                  <strong>{item.title}</strong>
+                </li>
+              ))}
+            </LiquidGlassSurface>
+          </div>
+        </Container>
+      </div>
+      <div className="service-speed-conclusion">
+        <Container>
+          <p className="service-speed-highlight">{serviceSpeed.highlight}</p>
+        </Container>
+      </div>
     </Section>
   );
 }
