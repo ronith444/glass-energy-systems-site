@@ -14,18 +14,6 @@ export function InitialPlatformSection() {
           <Eyebrow>{initialPlatform.eyebrow}</Eyebrow>
           <h2 id="initial-platform-title">{initialPlatform.headline}</h2>
           <p className="visual-qualifier">Conceptual system architecture</p>
-          <LiquidGlassSurface
-            as="ul"
-            className="spec-strip initial-spec-console"
-            variant="light"
-            aria-label="Initial platform specifications"
-            radius={12}
-          >
-            {initialSpecs.map((item) => (
-              <li key={item.title}>{item.title}</li>
-            ))}
-          </LiquidGlassSurface>
-          <p className="disclaimer">{initialPlatform.disclaimer}</p>
         </div>
         <div className="initial-platform-visual-field">
           <RenderedSectionVisual
@@ -35,6 +23,18 @@ export function InitialPlatformSection() {
             className="initial-platform-render"
           />
         </div>
+        <LiquidGlassSurface
+          as="ul"
+          className="spec-strip initial-spec-console"
+          variant="light"
+          aria-label="Initial platform specifications"
+          radius={12}
+        >
+          {initialSpecs.map((item) => (
+            <li key={item.title}>{item.title}</li>
+          ))}
+        </LiquidGlassSurface>
+        <p className="disclaimer initial-platform-disclaimer">{initialPlatform.disclaimer}</p>
       </Container>
     </Section>
   );

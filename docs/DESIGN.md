@@ -158,6 +158,28 @@ Use 16px for primary cards and surfaces, 8px for buttons, 4px for inputs and sma
 Surfaces should feel editorial and precise:
 
 - dark sections use subtle canopy gradients and thin sage borders
+
+## Mobile Responsive Repair Strategy
+
+The desktop composition at `1024px` and above is treated as approved. Mobile repair work is scoped to `max-width: 767px` and `max-width: 479px` unless an existing narrow-tablet overflow must be corrected.
+
+Mobile rules:
+
+- Use `--mobile-page-pad`, `--mobile-section-major`, `--mobile-section-standard`, `--mobile-section-compact`, `--mobile-content-gap`, `--mobile-header-height`, and `--mobile-header-safe-offset`.
+- Reset rendered technical visuals to `width: 100%`, `height: auto`, `object-fit: contain`, `object-position: center`, and no transforms.
+- Preserve important copy as semantic HTML and keep every section readable without horizontal scrolling.
+- Keep only the approved mobile glass surfaces: hero secondary CTA, hero technical rail, capability panel, service process panel, architecture legend, initial specification console, partnership secondary CTA, and mobile menu.
+- Use the compact mark-only logo in the mobile header and the full lockup in the footer.
+- Mobile section order is:
+  - Hero: copy, CTAs, complete system visual, technical rail.
+  - What We Are Building: copy, outcomes, technical image, capability panel.
+  - Service Speed: copy, image, process rows, conclusion.
+  - System Architecture: copy, complete image, legend.
+  - Initial Platform: copy and qualifier, image, specification console, disclaimer.
+  - Built for India: copy, image, principle list.
+  - Partnership CTA: copy, CTAs, abstract glass sculpture.
+
+Mobile overflow acceptance rule: at `767px`, `480px`, `430px`, `390px`, and `360px`, no visible text, image, button, panel, footer group, or section content may cross the viewport bounds.
 - light sections use Cream Paper and Sheet White
 - cards should be calm and readable
 - surface layering should clarify system hierarchy

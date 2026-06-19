@@ -9,21 +9,21 @@ export function BuiltForIndiaSection() {
   return (
     <Section id={builtForIndia.id} surface="sage" labelledBy="india-title">
       <Container className="built-india-layout">
+        <div className="built-india-copy">
+          <Eyebrow>{builtForIndia.eyebrow}</Eyebrow>
+          <h2 id="india-title">{builtForIndia.headline}</h2>
+        </div>
         <RenderedSectionVisual
           src={builtForIndiaVisual}
-          alt="Infrastructure-oriented PCS deployment visual with grid, storage, controls and C&I load context."
+          alt="Infrastructure oriented PCS deployment visual with grid, storage, controls and C&I load context."
           aspectRatio="1491 / 1055"
           className="built-india-render"
         />
-        <div>
-          <Eyebrow>{builtForIndia.eyebrow}</Eyebrow>
-          <h2 id="india-title">{builtForIndia.headline}</h2>
-          <ul className="editorial-list">
-            {indiaPoints.map((item) => (
-              <li key={item.title}>{item.title}</li>
-            ))}
-          </ul>
-        </div>
+        <ul className="editorial-list built-india-list">
+          {indiaPoints.map((item) => (
+            <li key={item.title}>{item.title}</li>
+          ))}
+        </ul>
       </Container>
     </Section>
   );

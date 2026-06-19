@@ -24,7 +24,7 @@ export function PartnershipCTASection() {
         <div className="partnership-visual-field">
           <RenderedSectionVisual
             src={partnershipVisual}
-            alt="Glass panel structure resolving the deployment connector into a partner handoff."
+            alt="Abstract layered glass sculpture representing a supported pilot handoff."
             aspectRatio="1491 / 1055"
             className="partnership-render"
           />

@@ -26,9 +26,9 @@ export const primaryCta: CTA = {
 
 export const hero = {
   id: "hero",
-  eyebrow: "PCS-FIRST · INDIA-READY · SERVICE-LED",
-  headline: "PCS-first energy storage infrastructure for India.",
-  body: "Glass Energy Systems is building the deployment and reliability layer around power conversion—bringing together integration, testing, commissioning, interoperability and responsive field support for commercial and industrial energy storage.",
+  eyebrow: "PCS FIRST · INDIA READY · SERVICE LED",
+  headline: "PCS first energy storage infrastructure for India.",
+  body: "Glass Energy Systems is building the deployment and reliability layer around power conversion. It brings together integration, testing, commissioning, interoperability and responsive field support for commercial and industrial energy storage.",
   primaryCta,
   secondaryCta: { label: "Explore our approach", href: "#approach" },
 } satisfies SectionCopy & { primaryCta: CTA; secondaryCta: CTA };
@@ -37,7 +37,7 @@ export const technicalLabels: TechnicalLabel[] = [
   { label: "100kW bidirectional PCS initial focus" },
   { label: "700–1000V DC" },
   { label: "400/415V AC" },
-  { label: "3-phase · 50Hz" },
+  { label: "3 phase · 50Hz" },
   { label: "CAN · Modbus · Ethernet" },
 ];
 
@@ -49,7 +49,7 @@ export const whatWeBuild = {
 } satisfies SectionCopy;
 
 export const approachOutcomes: ListItem[] = [
-  { title: "Grid-ready by design" },
+  { title: "Grid ready by design" },
   { title: "Engineered for reliability" },
   { title: "Built for scale, supported for life" },
 ];
@@ -62,7 +62,7 @@ export const capabilities = [
   },
   {
     title: "FAT and documentation",
-    body: "Structure FAT support, supplier documents, protocol maps and fault-code review before site work.",
+    body: "Structure FAT support, supplier documents, protocol maps and fault code review before site work.",
     status: "Verified",
   },
   {
@@ -95,7 +95,7 @@ export const servicePrinciples: ListItem[] = [
 export const whyPcs = {
   id: "why-pcs",
   eyebrow: "WHY PCS FIRST",
-  headline: "The highest-leverage control point in the storage system.",
+  headline: "The highest leverage control point in the storage system.",
   body: "The PCS sits between the battery, the electrical load and the grid. It determines how energy is converted, how the system responds and how effectively the surrounding components operate together.",
 } satisfies SectionCopy;
 
@@ -148,7 +148,7 @@ export const initialSpecs: ListItem[] = [
   { title: "100kW initial focus" },
   { title: "700–1000V DC target" },
   { title: "400/415V AC" },
-  { title: "3-phase · 50Hz" },
+  { title: "3 phase · 50Hz" },
   { title: "CAN · Modbus · Ethernet" },
   { title: "C&I storage, backup and renewable integration" },
 ];
@@ -156,12 +156,12 @@ export const initialSpecs: ListItem[] = [
 export const builtForIndia = {
   id: "built-for-india",
   eyebrow: "BUILT FOR INDIA",
-  headline: "Global power technology. India-owned deployment capability.",
+  headline: "Global power technology. India owned deployment capability.",
 } satisfies SectionCopy;
 
 export const indiaPoints: ListItem[] = [
   { title: "Indian electrical conditions" },
-  { title: "Deployment-ready documentation" },
+  { title: "Deployment ready documentation" },
   { title: "Local integration knowledge" },
   { title: "Service continuity" },
 ];
@@ -170,7 +170,7 @@ export const serviceReliability = {
   id: "service-reliability",
   eyebrow: "AFTER COMMISSIONING",
   headline: "Delivery is an event. Reliability is an operating system.",
-  closingLine: "The long-term advantage is not simply supplying a PCS. It is learning from every deployment and resolving the next issue faster.",
+  closingLine: "The long term advantage is not simply supplying a PCS. It is learning from every deployment and resolving the next issue faster.",
 } satisfies SectionCopy & { closingLine: string };
 
 export const serviceModules: ListItem[] = [
@@ -199,8 +199,8 @@ export const developmentStages: TimelineStage[] = [
 export const partnershipCta = {
   id: "partners",
   eyebrow: "BUILD WITH GLASS",
-  headline: "Build a pilot that can be supported—not just delivered.",
-  body: "We are engaging with C&I storage integrators, battery partners, PCS and component suppliers, pilot customers and technical service partners who want to build dependable energy-storage capability for India.",
+  headline: "Build a pilot that can be supported, not just delivered.",
+  body: "We are engaging with C&I storage integrators, battery partners, PCS and component suppliers, pilot customers and technical service partners who want to build dependable energy storage capability for India.",
   primaryCta,
   secondaryCta: {
     label: "Become a technology partner",
@@ -209,7 +209,7 @@ export const partnershipCta = {
 } satisfies SectionCopy & { primaryCta: CTA; secondaryCta: CTA };
 
 export const footer = {
-  brandStatement: "Building the deployment, reliability and intelligence layer for India’s energy-storage infrastructure.",
+  brandStatement: "Building the deployment, reliability and intelligence layer for India’s energy storage infrastructure.",
   finalLine: "Engineered for deployment. Supported for operation. Built to improve with every system.",
   email: contactEmail,
 };

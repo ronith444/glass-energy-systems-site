@@ -16,7 +16,7 @@ export function DeploymentModelSection() {
         </div>
         <RenderedSectionVisual
           src={deploymentVisual}
-          alt="Six-stage deployment process from qualification through stabilization."
+          alt="Six stage deployment process from qualification through stabilization."
           aspectRatio="1672 / 941"
           className="deployment-render"
         />

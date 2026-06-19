@@ -10,22 +10,9 @@ export function SystemArchitectureSection() {
   return (
     <Section id={systemArchitecture.id} surface="sage" labelledBy="architecture-title">
       <Container className="architecture-render-layout">
-        <div>
+        <div className="architecture-copy">
           <Eyebrow>{systemArchitecture.eyebrow}</Eyebrow>
           <h2 id="architecture-title">{systemArchitecture.headline}</h2>
-          <LiquidGlassSurface
-            as="ul"
-            className="architecture-node-list"
-            variant="light"
-            aria-label="Architecture legend"
-            radius={12}
-          >
-            {architectureNodes.map((node) => (
-              <li key={node.title} data-kind={node.kind}>
-                {node.title}
-              </li>
-            ))}
-          </LiquidGlassSurface>
         </div>
         <div className="architecture-visual-field">
           <RenderedSectionVisual
@@ -35,6 +22,19 @@ export function SystemArchitectureSection() {
             className="architecture-render"
           />
         </div>
+        <LiquidGlassSurface
+          as="ul"
+          className="architecture-node-list"
+          variant="light"
+          aria-label="Architecture legend"
+          radius={12}
+        >
+          {architectureNodes.map((node) => (
+            <li key={node.title} data-kind={node.kind}>
+              {node.title}
+            </li>
+          ))}
+        </LiquidGlassSurface>
       </Container>
     </Section>
   );

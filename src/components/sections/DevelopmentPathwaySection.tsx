@@ -16,7 +16,7 @@ export function DevelopmentPathwaySection() {
         </div>
         <RenderedSectionVisual
           src={developmentVisual}
-          alt="Five-stage development pathway showing capability growth toward layered intelligence."
+          alt="Five stage development pathway showing capability growth toward layered intelligence."
           aspectRatio="1672 / 941"
           className="development-render"
         />

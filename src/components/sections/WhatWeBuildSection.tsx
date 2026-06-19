@@ -1,4 +1,4 @@
-import approachVisual from "../../assets/visuals/02-approach-capability-system.webp";
+import approachVisual from "../../assets/visuals/02-approach-capability-system.jpg";
 import { approachOutcomes, capabilities, whatWeBuild } from "../../content/siteContent";
 import { Container } from "../layout/Container";
 import { Section } from "../layout/Section";

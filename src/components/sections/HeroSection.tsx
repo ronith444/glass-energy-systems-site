@@ -25,7 +25,7 @@ export function HeroSection() {
         <div className="hero-rendered-system">
           <RenderedSectionVisual
             src={heroSystemVisual}
-            alt="Conceptual PCS-centered system linking grid interface, power conversion, storage and C&I application."
+            alt="Conceptual PCS centered system linking grid interface, power conversion, storage and C&I application."
             aspectRatio="1672 / 941"
             className="hero-system-render"
             fetchPriority="high"
