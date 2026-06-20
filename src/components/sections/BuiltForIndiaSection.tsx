@@ -11,7 +11,9 @@ export function BuiltForIndiaSection() {
       <Container className="built-india-layout">
         <div className="built-india-copy">
           <Eyebrow>{builtForIndia.eyebrow}</Eyebrow>
-          <h2 id="india-title">{builtForIndia.headline}</h2>
+          <h2 id="india-title" data-motion="headline">
+            {builtForIndia.headline}
+          </h2>
         </div>
         <RenderedSectionVisual
           src={builtForIndiaVisual}
@@ -20,8 +22,10 @@ export function BuiltForIndiaSection() {
           className="built-india-render"
         />
         <ul className="editorial-list built-india-list">
-          {indiaPoints.map((item) => (
-            <li key={item.title}>{item.title}</li>
+          {indiaPoints.map((item, index) => (
+            <li key={item.title} data-motion="item" data-motion-order={index}>
+              {item.title}
+            </li>
           ))}
         </ul>
       </Container>

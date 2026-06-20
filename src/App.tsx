@@ -14,10 +14,12 @@ import { DevelopmentPathwaySection } from "./components/sections/DevelopmentPath
 import { PartnershipCTASection } from "./components/sections/PartnershipCTASection";
 import { InquiryModal } from "./components/forms/InquiryModal";
 import type { InquiryType } from "./components/forms/formTypes";
+import { useSiteMotion } from "./motion/useSiteMotion";
 
 export default function App() {
   const [inquiryType, setInquiryType] = useState<InquiryType | null>(null);
   const openerRef = useRef<HTMLElement | null>(null);
+  useSiteMotion();
 
   const openInquiry = useCallback((type: InquiryType, opener: HTMLElement) => {
     openerRef.current = opener;

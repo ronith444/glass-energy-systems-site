@@ -8,16 +8,20 @@ export function ServiceReliabilitySection() {
     <Section id={serviceReliability.id} surface="sheet" labelledBy="reliability-title">
       <Container>
         <Eyebrow>{serviceReliability.eyebrow}</Eyebrow>
-        <h2 id="reliability-title">{serviceReliability.headline}</h2>
+        <h2 id="reliability-title" data-motion="headline">
+          {serviceReliability.headline}
+        </h2>
         <ul className="module-grid">
           {serviceModules.map((item, index) => (
-            <li key={item.title}>
+            <li key={item.title} data-motion="item" data-motion-order={index}>
               <span>0{index + 1}</span>
               <strong>{item.title}</strong>
             </li>
           ))}
         </ul>
-        <p className="section-closing">{serviceReliability.closingLine}</p>
+        <p className="section-closing" data-motion="body">
+          {serviceReliability.closingLine}
+        </p>
       </Container>
     </Section>
   );

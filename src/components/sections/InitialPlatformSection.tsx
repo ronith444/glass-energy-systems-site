@@ -12,8 +12,12 @@ export function InitialPlatformSection() {
       <Container className="initial-platform-layout">
         <div className="initial-platform-copy">
           <Eyebrow>{initialPlatform.eyebrow}</Eyebrow>
-          <h2 id="initial-platform-title">{initialPlatform.headline}</h2>
-          <p className="visual-qualifier">Conceptual system architecture</p>
+          <h2 id="initial-platform-title" data-motion="headline">
+            {initialPlatform.headline}
+          </h2>
+          <p className="visual-qualifier" data-motion="body">
+            Conceptual system architecture
+          </p>
         </div>
         <div className="initial-platform-visual-field">
           <RenderedSectionVisual
@@ -29,12 +33,18 @@ export function InitialPlatformSection() {
           variant="light"
           aria-label="Initial platform specifications"
           radius={12}
+          data-motion="panel"
+          data-motion-reflection
         >
-          {initialSpecs.map((item) => (
-            <li key={item.title}>{item.title}</li>
+          {initialSpecs.map((item, index) => (
+            <li key={item.title} data-motion="item" data-motion-order={index}>
+              {item.title}
+            </li>
           ))}
         </LiquidGlassSurface>
-        <p className="disclaimer initial-platform-disclaimer">{initialPlatform.disclaimer}</p>
+        <p className="disclaimer initial-platform-disclaimer" data-motion="body">
+          {initialPlatform.disclaimer}
+        </p>
       </Container>
     </Section>
   );

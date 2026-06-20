@@ -8,7 +8,7 @@ interface ButtonProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
 
 export function Button({ children, className, variant = "primary", ...props }: ButtonProps) {
   return (
-    <a className={cn("button", `button-${variant}`, className)} {...props}>
+    <a data-motion="button" className={cn("button", `button-${variant}`, className)} {...props}>
       {children}
     </a>
   );

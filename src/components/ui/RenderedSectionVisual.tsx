@@ -12,6 +12,7 @@ interface RenderedSectionVisualProps {
   decorative?: boolean;
   fetchPriority?: FetchPriority;
   loading?: LoadingMode;
+  reflection?: boolean;
 }
 
 export function RenderedSectionVisual({
@@ -22,10 +23,12 @@ export function RenderedSectionVisual({
   decorative = false,
   fetchPriority,
   loading = "lazy",
+  reflection = false,
 }: RenderedSectionVisualProps) {
   return (
     <figure
       className={cn("rendered-visual", className)}
+      data-motion="visual"
       style={{ "--visual-aspect-ratio": aspectRatio } as CSSProperties}
     >
       <img
@@ -36,6 +39,8 @@ export function RenderedSectionVisual({
         fetchPriority={fetchPriority}
         loading={loading}
       />
+      <span className="motion-visual-overlay" aria-hidden="true" />
+      {reflection ? <span className="motion-reflection" data-motion="reflection" aria-hidden="true" /> : null}
     </figure>
   );
 }

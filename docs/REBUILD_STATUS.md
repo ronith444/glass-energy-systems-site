@@ -112,6 +112,7 @@ Final UI, asset integration, liquid-glass, responsive polish, atmospheric scene 
 - Liquid-glass success, validation, loading and error states completed.
 - Modal scroll lock, focus trap, Escape close, backdrop close and focus restoration completed.
 - Responsive inquiry modal baseline completed for desktop, tablet and mobile.
+- PROFESSIONAL MOTION SYSTEM COMPLETE.
 
 ## Not Started
 
@@ -119,9 +120,12 @@ Final UI, asset integration, liquid-glass, responsive polish, atmospheric scene 
 - Full-page pixel-perfect desktop implementation
 - Final copy changes beyond approved content
 - Final bespoke SVG refinements beyond rendered WebP support
-- Motion
 - Staging
 - Production launch
+
+## Motion System Notes
+
+The site now uses a restrained one-time motion system documented in `docs/MOTION_SYSTEM.md`. Motion is progressive enhancement only: the static approved layout remains visible without JavaScript, reduced-motion users see immediate settled content, and no animation loops, scroll locking, pinning, scroll scrubbing, parallax, WebGL, Canvas or new dependencies are used.
 
 ## Inquiry Form Notes
 

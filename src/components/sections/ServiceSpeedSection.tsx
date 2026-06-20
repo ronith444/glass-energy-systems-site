@@ -18,8 +18,10 @@ export function ServiceSpeedSection() {
         <Container className="service-speed-layout">
           <div className="service-speed-copy">
             <Eyebrow>{serviceSpeed.eyebrow}</Eyebrow>
-            <h2 id="service-speed-title">{serviceSpeed.headline}</h2>
-            <p>{serviceSpeed.body}</p>
+            <h2 id="service-speed-title" data-motion="headline">
+              {serviceSpeed.headline}
+            </h2>
+            <p data-motion="body">{serviceSpeed.body}</p>
           </div>
           <div className="service-speed-visual-column">
             <RenderedSectionVisual
@@ -33,9 +35,15 @@ export function ServiceSpeedSection() {
               className="service-process service-speed-process"
               aria-label="Service speed process"
               radius={12}
+              data-motion="panel"
             >
               {servicePrinciples.map((item, index) => (
-                <li key={item.title} className={`service-stage service-stage-${index + 1}`}>
+                <li
+                  key={item.title}
+                  className={`service-stage service-stage-${index + 1}`}
+                  data-motion="item"
+                  data-motion-order={index}
+                >
                   <span className="service-stage-index">0{index + 1}</span>
                   <strong>{item.title}</strong>
                 </li>
@@ -50,9 +58,11 @@ export function ServiceSpeedSection() {
 
 export function ServiceSpeedConclusion() {
   return (
-    <div className="service-speed-conclusion">
+    <div className="service-speed-conclusion" data-motion-section>
       <Container>
-        <p className="service-speed-highlight">{serviceSpeed.highlight}</p>
+        <p className="service-speed-highlight" data-motion="headline">
+          {serviceSpeed.highlight}
+        </p>
       </Container>
     </div>
   );

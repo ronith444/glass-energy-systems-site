@@ -9,12 +9,14 @@ export function WhyPCSSection() {
       <Container className="why-pcs-entry">
         <div className="why-pcs-copy">
           <Eyebrow>{whyPcs.eyebrow}</Eyebrow>
-          <h2 id="why-pcs-title">{whyPcs.headline}</h2>
-          <p>{whyPcs.body}</p>
+          <h2 id="why-pcs-title" data-motion="headline">
+            {whyPcs.headline}
+          </h2>
+          <p data-motion="body">{whyPcs.body}</p>
         </div>
         <ul className="reason-columns" aria-label="Why PCS is the control point">
           {pcsReasons.map((item, index) => (
-            <li key={item.title}>
+            <li key={item.title} data-motion="item" data-motion-order={index}>
               <span>0{index + 1}</span>
               <strong>{item.title}</strong>
             </li>

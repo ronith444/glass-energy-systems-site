@@ -12,7 +12,9 @@ export function DeploymentModelSection() {
       <Container className="rendered-process-section">
         <div className="section-heading-block">
           <Eyebrow>{deploymentModel.eyebrow}</Eyebrow>
-          <h2 id="deployment-title">{deploymentModel.headline}</h2>
+          <h2 id="deployment-title" data-motion="headline">
+            {deploymentModel.headline}
+          </h2>
         </div>
         <RenderedSectionVisual
           src={deploymentVisual}
@@ -21,7 +23,9 @@ export function DeploymentModelSection() {
           className="deployment-render"
         />
         <DeploymentTimeline stages={deploymentStages} />
-        <p className="section-closing">{deploymentModel.closingLine}</p>
+        <p className="section-closing" data-motion="body">
+          {deploymentModel.closingLine}
+        </p>
       </Container>
     </Section>
   );

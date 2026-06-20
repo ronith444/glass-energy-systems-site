@@ -12,11 +12,15 @@ export function WhatWeBuildSection() {
       <Container className="approach-grid">
         <div className="approach-copy">
           <Eyebrow>{whatWeBuild.eyebrow}</Eyebrow>
-          <h2 id="what-title">{whatWeBuild.headline}</h2>
-          <p>{whatWeBuild.body}</p>
+          <h2 id="what-title" data-motion="headline">
+            {whatWeBuild.headline}
+          </h2>
+          <p data-motion="body">{whatWeBuild.body}</p>
           <ul className="outcome-list" aria-label="Deployment outcomes">
-            {approachOutcomes.map((item) => (
-              <li key={item.title}>{item.title}</li>
+            {approachOutcomes.map((item, index) => (
+              <li key={item.title} data-motion="item" data-motion-order={index}>
+                {item.title}
+              </li>
             ))}
           </ul>
         </div>
@@ -32,9 +36,10 @@ export function WhatWeBuildSection() {
             className="capability-list rendered-capability-list"
             aria-label="Glass capability workflow"
             radius={14}
+            data-motion="panel"
           >
-            {capabilities.map((item) => (
-              <li key={item.title}>
+            {capabilities.map((item, index) => (
+              <li key={item.title} data-motion="item" data-motion-order={index}>
                 <span>
                   <strong>{item.title}</strong>
                   <em>{item.body}</em>

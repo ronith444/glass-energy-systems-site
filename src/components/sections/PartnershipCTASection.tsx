@@ -20,11 +20,14 @@ export function PartnershipCTASection({
       <Container className="cta-grid">
         <div>
           <Eyebrow>{partnershipCta.eyebrow}</Eyebrow>
-          <h2 id="partners-title">{partnershipCta.headline}</h2>
-          <p>{partnershipCta.body}</p>
+          <h2 id="partners-title" data-motion="headline">
+            {partnershipCta.headline}
+          </h2>
+          <p data-motion="body">{partnershipCta.body}</p>
           <div className="button-row">
             <Button
               href={partnershipCta.primaryCta.href}
+              data-motion-order="0"
               onClick={(event) => {
                 event.preventDefault();
                 onOpenDiscussion(event.currentTarget);
@@ -35,6 +38,7 @@ export function PartnershipCTASection({
             <Button
               href={partnershipCta.secondaryCta.href}
               variant="secondary"
+              data-motion-order="1"
               onClick={(event) => {
                 event.preventDefault();
                 onOpenTechnologyPartner(event.currentTarget);
@@ -50,6 +54,7 @@ export function PartnershipCTASection({
             alt="Glass Energy Systems logo."
             aspectRatio="1491 / 1055"
             className="partnership-render"
+            reflection
           />
         </div>
       </Container>

@@ -17,11 +17,14 @@ export function HeroSection({ onOpenDiscussion }: HeroSectionProps) {
       <Container className="hero-layout">
         <div className="hero-copy">
           <Eyebrow>{hero.eyebrow}</Eyebrow>
-          <h1 id="hero-title">{hero.headline}</h1>
-          <p>{hero.body}</p>
+          <h1 id="hero-title" data-motion="headline">
+            {hero.headline}
+          </h1>
+          <p data-motion="body">{hero.body}</p>
           <div className="button-row">
             <Button
               href={hero.primaryCta.href}
+              data-motion-order="0"
               onClick={(event) => {
                 event.preventDefault();
                 onOpenDiscussion(event.currentTarget);
@@ -29,7 +32,7 @@ export function HeroSection({ onOpenDiscussion }: HeroSectionProps) {
             >
               {hero.primaryCta.label}
             </Button>
-            <Button href={hero.secondaryCta.href} variant="secondary">
+            <Button href={hero.secondaryCta.href} variant="secondary" data-motion-order="1">
               {hero.secondaryCta.label}
             </Button>
           </div>
@@ -42,15 +45,22 @@ export function HeroSection({ onOpenDiscussion }: HeroSectionProps) {
             className="hero-system-render"
             fetchPriority="high"
             loading="eager"
+            reflection
           />
           <LiquidGlassSurface
             className="technical-labels hero-technical-rail"
             aria-label="Technical focus"
             density="compact"
             radius={12}
+            data-motion="panel"
           >
-            {technicalLabels.map((item) => (
-              <span className="technical-label" key={item.label}>
+            {technicalLabels.map((item, index) => (
+              <span
+                className="technical-label"
+                data-motion="item"
+                data-motion-order={index}
+                key={item.label}
+              >
                 {item.label}
               </span>
             ))}

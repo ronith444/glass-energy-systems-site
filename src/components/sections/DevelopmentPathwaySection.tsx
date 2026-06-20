@@ -12,7 +12,9 @@ export function DevelopmentPathwaySection() {
       <Container className="rendered-process-section development-render-section">
         <div className="section-heading-block">
           <Eyebrow>{developmentPathway.eyebrow}</Eyebrow>
-          <h2 id="development-title">{developmentPathway.headline}</h2>
+          <h2 id="development-title" data-motion="headline">
+            {developmentPathway.headline}
+          </h2>
         </div>
         <RenderedSectionVisual
           src={developmentVisual}
@@ -21,7 +23,9 @@ export function DevelopmentPathwaySection() {
           className="development-render"
         />
         <DevelopmentTimeline stages={developmentStages} />
-        <p className="disclaimer">{developmentPathway.disclaimer}</p>
+        <p className="disclaimer" data-motion="body">
+          {developmentPathway.disclaimer}
+        </p>
       </Container>
     </Section>
   );

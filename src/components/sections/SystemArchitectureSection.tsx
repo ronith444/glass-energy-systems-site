@@ -12,7 +12,9 @@ export function SystemArchitectureSection() {
       <Container className="architecture-render-layout">
         <div className="architecture-copy">
           <Eyebrow>{systemArchitecture.eyebrow}</Eyebrow>
-          <h2 id="architecture-title">{systemArchitecture.headline}</h2>
+          <h2 id="architecture-title" data-motion="headline">
+            {systemArchitecture.headline}
+          </h2>
         </div>
         <div className="architecture-visual-field">
           <RenderedSectionVisual
@@ -28,9 +30,10 @@ export function SystemArchitectureSection() {
           variant="light"
           aria-label="Architecture legend"
           radius={12}
+          data-motion="panel"
         >
-          {architectureNodes.map((node) => (
-            <li key={node.title} data-kind={node.kind}>
+          {architectureNodes.map((node, index) => (
+            <li key={node.title} data-kind={node.kind} data-motion="item" data-motion-order={index}>
               {node.title}
             </li>
           ))}
