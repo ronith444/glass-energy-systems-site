@@ -6,7 +6,15 @@ import { Button } from "../ui/Button";
 import { Eyebrow } from "../ui/Eyebrow";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
-export function PartnershipCTASection() {
+interface PartnershipCTASectionProps {
+  onOpenDiscussion: (opener: HTMLElement) => void;
+  onOpenTechnologyPartner: (opener: HTMLElement) => void;
+}
+
+export function PartnershipCTASection({
+  onOpenDiscussion,
+  onOpenTechnologyPartner,
+}: PartnershipCTASectionProps) {
   return (
     <Section id={partnershipCta.id} surface="cta" labelledBy="partners-title">
       <Container className="cta-grid">
@@ -15,8 +23,23 @@ export function PartnershipCTASection() {
           <h2 id="partners-title">{partnershipCta.headline}</h2>
           <p>{partnershipCta.body}</p>
           <div className="button-row">
-            <Button href={partnershipCta.primaryCta.href}>{partnershipCta.primaryCta.label}</Button>
-            <Button href={partnershipCta.secondaryCta.href} variant="secondary">
+            <Button
+              href={partnershipCta.primaryCta.href}
+              onClick={(event) => {
+                event.preventDefault();
+                onOpenDiscussion(event.currentTarget);
+              }}
+            >
+              {partnershipCta.primaryCta.label}
+            </Button>
+            <Button
+              href={partnershipCta.secondaryCta.href}
+              variant="secondary"
+              onClick={(event) => {
+                event.preventDefault();
+                onOpenTechnologyPartner(event.currentTarget);
+              }}
+            >
               {partnershipCta.secondaryCta.label}
             </Button>
           </div>

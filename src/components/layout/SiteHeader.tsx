@@ -3,7 +3,11 @@ import logoFull from "../../assets/brand/glass-logo-full-dark.png";
 import { navigation, primaryCta } from "../../content/siteContent";
 import { Button } from "../ui/Button";
 
-export function SiteHeader() {
+interface SiteHeaderProps {
+  onOpenDiscussion: (opener: HTMLElement) => void;
+}
+
+export function SiteHeader({ onOpenDiscussion }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -33,7 +37,15 @@ export function SiteHeader() {
             </a>
           ))}
         </nav>
-        <Button href={primaryCta.href} className="header-cta">
+        <Button
+          href={primaryCta.href}
+          className="header-cta"
+          onClick={(event) => {
+            event.preventDefault();
+            setMenuOpen(false);
+            onOpenDiscussion(event.currentTarget);
+          }}
+        >
           {primaryCta.label}
         </Button>
       </div>

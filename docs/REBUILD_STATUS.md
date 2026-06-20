@@ -2,7 +2,7 @@
 
 ## Current Phase
 
-Final UI, asset integration, liquid-glass, responsive polish and atmospheric scene repair complete.
+Final UI, asset integration, liquid-glass, responsive polish, atmospheric scene repair and inquiry forms complete.
 
 ## Completed
 
@@ -103,6 +103,15 @@ Final UI, asset integration, liquid-glass, responsive polish and atmospheric sce
 - Final responsive production QA completed.
 - Site-wide content-backed surface transition architecture completed.
 - Empty gradient bridges and overlapping transition owners removed.
+- Liquid-glass inquiry modal system completed.
+- Start a Discussion inquiry form completed.
+- Technology Partner inquiry form completed.
+- Web3Forms submission integration completed.
+- Web3Forms environment variable wiring completed with `VITE_WEB3FORMS_ACCESS_KEY`.
+- Fixed inquiry email subjects completed.
+- Liquid-glass success, validation, loading and error states completed.
+- Modal scroll lock, focus trap, Escape close, backdrop close and focus restoration completed.
+- Responsive inquiry modal baseline completed for desktop, tablet and mobile.
 
 ## Not Started
 
@@ -113,6 +122,30 @@ Final UI, asset integration, liquid-glass, responsive polish and atmospheric sce
 - Motion
 - Staging
 - Production launch
+
+## Inquiry Form Notes
+
+The site has one reusable inquiry modal system with two form types:
+
+- `Start a Discussion`
+- `Technology Partner Inquiry`
+
+Both forms submit to Web3Forms through `https://api.web3forms.com/submit` using `import.meta.env.VITE_WEB3FORMS_ACCESS_KEY`. The visitor email field is named `email` so Web3Forms can use it for Reply-To behavior. The access key must remain in `.env.local` and must not be committed.
+
+Fixed subjects:
+
+- `Start a Discussion — Glass Energy Systems Website`
+- `Technology Partner Inquiry — Glass Energy Systems Website`
+
+Testing requirements for future changes:
+
+- Verify required-field validation, invalid email validation and invalid URL validation.
+- Verify loading, success and error states.
+- Verify failed submissions preserve entered data.
+- Verify successful submissions clear only the completed form.
+- Verify Escape, close button, backdrop click, focus trap, focus restoration and scroll lock.
+- Verify mobile modal usability at `430px`, `390px` and `360px`.
+- Verify no horizontal overflow at `1440px`, `1280px`, `1024px`, `768px`, `430px`, `390px` and `360px`.
 
 ## Latest Verification
 

@@ -20,3 +20,4 @@ reference/scroll-cinematic-reference.mp4.mp4
 .codex/*.log
 .codex/*.png
 .codex/chrome-profile*/
+.env.local

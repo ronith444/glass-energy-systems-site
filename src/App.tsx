@@ -1,3 +1,4 @@
+import { useCallback, useRef, useState } from "react";
 import { SiteHeader } from "./components/layout/SiteHeader";
 import { SiteFooter } from "./components/layout/SiteFooter";
 import { HeroSection } from "./components/sections/HeroSection";
@@ -11,14 +12,28 @@ import { BuiltForIndiaSection } from "./components/sections/BuiltForIndiaSection
 import { ServiceReliabilitySection } from "./components/sections/ServiceReliabilitySection";
 import { DevelopmentPathwaySection } from "./components/sections/DevelopmentPathwaySection";
 import { PartnershipCTASection } from "./components/sections/PartnershipCTASection";
+import { InquiryModal } from "./components/forms/InquiryModal";
+import type { InquiryType } from "./components/forms/formTypes";
 
 export default function App() {
+  const [inquiryType, setInquiryType] = useState<InquiryType | null>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+
+  const openInquiry = useCallback((type: InquiryType, opener: HTMLElement) => {
+    openerRef.current = opener;
+    setInquiryType(type);
+  }, []);
+
+  const closeInquiry = useCallback(() => {
+    setInquiryType(null);
+  }, []);
+
   return (
     <>
-      <SiteHeader />
+      <SiteHeader onOpenDiscussion={(opener) => openInquiry("discussion", opener)} />
       <main className="site-story">
         <div className="scene scene-opening-service">
-          <HeroSection />
+          <HeroSection onOpenDiscussion={(opener) => openInquiry("discussion", opener)} />
           <WhatWeBuildSection />
           <ServiceSpeedSection />
           <ServiceSpeedConclusion />
@@ -37,10 +52,14 @@ export default function App() {
         </div>
         <div className="scene scene-development-closing">
           <DevelopmentPathwaySection />
-          <PartnershipCTASection />
+          <PartnershipCTASection
+            onOpenDiscussion={(opener) => openInquiry("discussion", opener)}
+            onOpenTechnologyPartner={(opener) => openInquiry("technology-partner", opener)}
+          />
           <SiteFooter />
         </div>
       </main>
+      <InquiryModal inquiryType={inquiryType} openerRef={openerRef} onClose={closeInquiry} />
     </>
   );
 }

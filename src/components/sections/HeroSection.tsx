@@ -7,7 +7,11 @@ import { Eyebrow } from "../ui/Eyebrow";
 import { LiquidGlassSurface } from "../ui/LiquidGlassSurface";
 import { RenderedSectionVisual } from "../ui/RenderedSectionVisual";
 
-export function HeroSection() {
+interface HeroSectionProps {
+  onOpenDiscussion: (opener: HTMLElement) => void;
+}
+
+export function HeroSection({ onOpenDiscussion }: HeroSectionProps) {
   return (
     <Section id={hero.id} surface="hero" labelledBy="hero-title" className="hero-section">
       <Container className="hero-layout">
@@ -16,7 +20,15 @@ export function HeroSection() {
           <h1 id="hero-title">{hero.headline}</h1>
           <p>{hero.body}</p>
           <div className="button-row">
-            <Button href={hero.primaryCta.href}>{hero.primaryCta.label}</Button>
+            <Button
+              href={hero.primaryCta.href}
+              onClick={(event) => {
+                event.preventDefault();
+                onOpenDiscussion(event.currentTarget);
+              }}
+            >
+              {hero.primaryCta.label}
+            </Button>
             <Button href={hero.secondaryCta.href} variant="secondary">
               {hero.secondaryCta.label}
             </Button>
