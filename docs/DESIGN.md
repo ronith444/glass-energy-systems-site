@@ -214,26 +214,27 @@ The homepage should progress through:
 6. Dark partnership CTA
 7. Dark footer
 
-Current chapter structure:
+Current scene structure:
 
-1. Dark systems story: Hero, What We Are Building, Service Speed.
-2. Light deployment story: Why PCS First, Deployment Model.
-3. Technical architecture story: System Architecture, Initial Platform, Built for India.
-4. Reliability editorial story: Service and Reliability.
-5. Closing scene: Development Pathway, Partnership CTA and Footer in one continuous cream-to-dark atmosphere.
+1. Opening and Service scene: Hero, What We Are Building, Service Speed and the Service Speed conclusion.
+2. Editorial Cream scene: Why PCS First and Deployment Model.
+3. Deployment and Technical scene: System Architecture, Initial Platform and Built for India.
+4. Reliability scene: Service and Reliability.
+5. Development and Closing scene: Development Pathway, Partnership CTA and Footer in one continuous warm-to-dark atmosphere.
 
 The transition must be gradual rather than switching abruptly from dark to white.
 
 ## Atmospheric Scene Backgrounds
 
-Chapter transitions should feel like shared atmospheres, not strips inserted between sections. Do not use empty transition blocks, global connector fillers, CSS filter blur, backdrop-filter, box-shadow, transparent gradient endpoints, or isolated decorative bands to hide a section boundary.
+Page-surface transitions must occur inside content-bearing scene wrappers. Empty gradient bridges, transition-only spacer elements, overlapping transition owners, transparent destination fades and independent child section backgrounds are prohibited.
 
 Current scene owners:
 
-- `.service-speed-section`: owns the full dark-to-cream Service Speed scene, including copy, render, process panel, conclusion statement and the exit into Why PCS First.
-- `.development-closing-scene`: wraps Development Pathway, Partnership CTA and Footer as one cream-to-dark closing scene.
-- `#partners`: may add a short section-local darkening gradient so white CTA copy lands on a readable deep evergreen surface.
-- `#service-reliability`: keeps a compact opaque crossfade from Built for India into the editorial reliability chapter.
+- `.scene-opening-service`: owns the dark system surface and the dark-to-cream change behind Hero, What We Are Building, Service Speed and its conclusion.
+- `.scene-editorial-cream`: owns the stable cream surface behind Why PCS First and Deployment Model.
+- `.scene-deployment-technical`: owns the cream-to-sage change at the opening of the technical chapter and the stable sage surface behind System Architecture, Initial Platform and Built for India.
+- `.scene-reliability-development`: owns the sage-to-warm change behind the Service and Reliability opening.
+- `.scene-development-closing`: owns the warm-to-dark change behind Development Pathway and the stable dark surface behind Partnership CTA and Footer.
 
 Transition rules:
 

@@ -95,12 +95,14 @@ Final UI, asset integration, liquid-glass, responsive polish and atmospheric sce
 - Mobile section reading-order corrections completed.
 - Mobile CTA abstract sculpture correction completed.
 - Mobile screenshot and measurement review completed.
-- Section surface crossfade repair completed.
+- Section surface transition repair completed.
 - Service Speed continuous atmospheric scene completed.
 - Development Pathway, Partnership CTA and Footer closing scene completed.
 - Final atmospheric transition screenshot review completed.
 - Final atmospheric gradient profile completed.
 - Final responsive production QA completed.
+- Site-wide content-backed surface transition architecture completed.
+- Empty gradient bridges and overlapping transition owners removed.
 
 ## Not Started
 

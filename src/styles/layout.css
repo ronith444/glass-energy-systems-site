@@ -135,74 +135,6 @@
   padding-block: var(--section-standard);
 }
 
-.chapter {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-}
-
-.chapter > .section,
-.chapter > .site-footer {
-  position: relative;
-  z-index: 1;
-}
-
-.chapter-dark {
-  background:
-    radial-gradient(circle at 50% 10%, color-mix(in srgb, var(--color-canopy) 34%, transparent), transparent 34%),
-    linear-gradient(180deg, #081714 0%, var(--color-dark-canopy) 36%, var(--color-canopy) 76%, #7f9d95 100%);
-}
-
-.chapter-dark::after {
-  display: none;
-}
-
-.chapter-light {
-  background:
-    radial-gradient(circle at 30% 0%, color-mix(in srgb, var(--color-sheet-white) 82%, transparent), transparent 32%),
-    var(--color-cream-paper);
-}
-
-.chapter-technical {
-  background:
-    linear-gradient(
-      180deg,
-      var(--color-pale-sage) 0%,
-      color-mix(in srgb, var(--color-cream-paper) 84%, var(--color-pale-sage)) 42%,
-      var(--color-pale-sage) 100%
-    );
-}
-
-.chapter-technical::before,
-.chapter-closing::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 0;
-  height: var(--chapter-transition);
-  pointer-events: none;
-  content: "";
-}
-
-.chapter-technical::before {
-  background: linear-gradient(180deg, var(--color-cream-paper), transparent);
-}
-
-.chapter-editorial {
-  background: linear-gradient(180deg, var(--color-sheet-white), var(--color-cream-paper));
-}
-
-.chapter-closing {
-  background:
-    radial-gradient(circle at 74% 22%, color-mix(in srgb, var(--color-glass-blue-deep) 13%, transparent), transparent 30%),
-    linear-gradient(180deg, var(--color-canopy), var(--color-near-black-green));
-}
-
-.chapter-closing::before {
-  background: linear-gradient(180deg, var(--color-cream-paper), transparent);
-}
-
 .section-hero,
 .section-dark,
 .section-transition,
@@ -544,7 +476,7 @@
 }
 
 .service-speed-section {
-  padding-block: var(--section-major) var(--chapter-transition);
+  padding-block: var(--section-major) var(--transition-standard);
   color: var(--color-sheet-white);
   background: transparent;
 }
@@ -1571,46 +1503,6 @@
 
 .section {
   scroll-margin-top: calc(var(--header-offset) + 24px);
-}
-
-.chapter-dark {
-  background:
-    radial-gradient(circle at 50% 12%, color-mix(in srgb, var(--color-canopy) 28%, transparent), transparent 35%),
-    linear-gradient(180deg, #081714 0%, #0a211d 42%, #102f29 78%, #6c796b 100%);
-}
-
-.chapter-dark::after {
-  display: none;
-}
-
-.chapter-light {
-  background: linear-gradient(180deg, var(--color-cream-paper), #f3efea);
-}
-
-.chapter-technical {
-  background:
-    linear-gradient(180deg, var(--color-cream-paper) 0, #d2d4c7 12%, #e6e4d6 52%, #d3d6c8 100%);
-}
-
-.chapter-editorial {
-  position: relative;
-  background: linear-gradient(180deg, #fbfaf7, #f7f1ea);
-}
-
-.chapter-editorial::after {
-  display: none;
-}
-
-.chapter-closing {
-  margin-top: -1px;
-  padding-top: 0;
-  background:
-    radial-gradient(circle at 74% 20%, color-mix(in srgb, var(--color-glass-blue-deep) 12%, transparent), transparent 28%),
-    linear-gradient(180deg, rgb(20 58 50 / 0.96) 0%, #102f29 20%, #081412 70%, #071616);
-}
-
-.chapter-closing::before {
-  display: none;
 }
 
 #service-reliability {
@@ -3451,121 +3343,118 @@
   }
 }
 
-/* Site-wide surface transition refactor: stable chapters, single-owner bridges. */
+/* Final content-backed surface scene architecture. */
 .site-story {
-  overflow: hidden;
-  background: var(--surface-opening-dark);
+  overflow: clip;
+  background: var(--surface-dark);
 }
 
-.surface-chapter,
-.surface-bridge {
+.scene {
   position: relative;
   isolation: isolate;
-  overflow: hidden;
+  overflow: clip;
 }
 
-.surface-chapter > .section,
-.surface-chapter > .site-footer,
-.surface-bridge > * {
+.scene > .section,
+.scene > .site-footer,
+.scene > .service-speed-conclusion {
   position: relative;
   z-index: 1;
 }
 
-.surface-opening-dark {
-  color: var(--color-sheet-white);
-  background:
-    radial-gradient(72% 42% at 50% 12%, rgb(58 128 107 / 0.24) 0%, rgb(58 128 107 / 0) 68%),
-    linear-gradient(180deg, var(--surface-opening-dark) 0%, #09201b 42%, var(--surface-opening-mid) 100%);
-}
-
-.surface-editorial-cream {
-  color: var(--color-bark);
-  background: var(--surface-editorial-cream);
-}
-
-.surface-technical-sage {
-  color: var(--color-bark);
-  background:
-    radial-gradient(58% 46% at 78% 20%, rgb(123 196 244 / 0.10) 0%, rgb(123 196 244 / 0) 70%),
-    linear-gradient(180deg, #d5dacf 0%, var(--surface-technical-sage) 48%, #d3d8cc 100%);
-}
-
-.surface-editorial-warm {
-  color: var(--color-bark);
-  background: var(--surface-editorial-warm);
-}
-
-.surface-closing-dark {
-  color: var(--color-sheet-white);
-  background:
-    radial-gradient(64% 48% at 74% 20%, rgb(22 88 74 / 0.26) 0%, rgb(22 88 74 / 0) 72%),
-    radial-gradient(54% 40% at 28% 68%, rgb(123 196 244 / 0.08) 0%, rgb(123 196 244 / 0) 72%),
-    linear-gradient(180deg, #102f29 0%, #0a211d 34%, var(--surface-closing-dark) 100%);
-}
-
-.surface-bridge {
-  pointer-events: none;
-}
-
-.surface-bridge-a {
-  min-height: var(--surface-bridge-dark-cream);
-  display: grid;
-  align-items: end;
-  color: var(--color-bark);
-  background:
-    radial-gradient(76% 78% at 18% 8%, rgb(147 189 171 / 0.24) 0%, rgb(147 189 171 / 0) 70%),
-    linear-gradient(
-      180deg in oklab,
-      var(--surface-opening-mid) 0%,
-      #36594d 24%,
-      #849583 55%,
-      #d6d6c8 82%,
-      var(--surface-editorial-cream) 100%
-    );
-}
-
-.surface-bridge-a .service-speed-conclusion {
-  pointer-events: auto;
-  width: 100%;
-  padding-top: clamp(126px, 10vw, 154px);
-  padding-bottom: clamp(52px, 5vw, 70px);
+.scene .section,
+.scene .site-footer,
+.scene .service-speed-conclusion {
   background: transparent;
 }
 
-.surface-bridge-b {
-  height: var(--surface-bridge-cream-sage);
-  background: linear-gradient(180deg in oklab, var(--surface-editorial-cream) 0%, #e7e5db 48%, var(--surface-technical-sage) 100%);
-}
-
-.surface-bridge-c {
-  height: var(--surface-bridge-sage-warm);
-  background: linear-gradient(180deg in oklab, var(--surface-technical-sage) 0%, #e5e4d9 52%, var(--surface-editorial-warm) 100%);
-}
-
-.surface-bridge-d {
-  height: var(--surface-bridge-warm-dark);
+.scene-opening-service {
+  color: var(--color-sheet-white);
   background:
-    radial-gradient(70% 54% at 72% 52%, rgb(22 88 74 / 0.18) 0%, rgb(22 88 74 / 0) 72%),
+    radial-gradient(
+      95% 30% at 50% 82%,
+      rgb(230 232 211 / 0.42) 0%,
+      rgb(175 190 174 / 0.20) 45%,
+      rgb(175 190 174 / 0) 74%
+    ),
     linear-gradient(
       180deg in oklab,
-      var(--surface-editorial-warm) 0%,
-      #d4d8ca 22%,
-      #6f8778 46%,
-      #143a32 68%,
-      var(--surface-closing-dark) 100%
+      var(--surface-dark) 0%,
+      var(--surface-dark) 61%,
+      #15322d 68%,
+      var(--transition-forest) 75%,
+      var(--transition-sage) 82%,
+      var(--transition-pale) 89%,
+      #e7e4d9 95%,
+      var(--surface-cream) 100%
     );
 }
 
-.surface-opening-dark .section,
-.surface-editorial-cream .section,
-.surface-technical-sage .section,
-.surface-editorial-warm .section,
-.surface-closing-dark .section,
-.surface-closing-dark .site-footer,
-.service-speed-section,
-#service-reliability,
-#development-pathway,
-#partners {
+.scene-editorial-cream {
+  color: var(--color-bark);
+  background: var(--surface-cream);
+}
+
+.scene-deployment-technical {
+  color: var(--color-bark);
+  background:
+    radial-gradient(60% 42% at 78% 18%, rgb(123 196 244 / 0.10) 0%, rgb(123 196 244 / 0) 70%),
+    linear-gradient(
+      180deg in oklab,
+      var(--surface-cream) 0,
+      var(--surface-cream) 120px,
+      #e4e5da 190px,
+      var(--surface-sage) 280px,
+      var(--surface-sage) 100%
+    );
+}
+
+.scene-reliability-development {
+  color: var(--color-bark);
+  background:
+    linear-gradient(
+      180deg in oklab,
+      var(--surface-sage) 0,
+      #e0e1d5 72px,
+      var(--surface-warm) 132px,
+      var(--surface-warm) 100%
+    );
+}
+
+.scene-development-closing {
+  color: var(--color-bark);
+  background:
+    radial-gradient(
+      80% 32% at 50% 54%,
+      rgb(166 191 174 / 0.18),
+      rgb(166 191 174 / 0) 74%
+    ),
+    linear-gradient(
+      180deg in oklab,
+      var(--surface-warm) 0%,
+      var(--surface-warm) 47%,
+      #dce0d3 55%,
+      #a4b5a5 63%,
+      #68877a 71%,
+      #315a4e 79%,
+      var(--surface-dark-mid) 86%,
+      var(--surface-closing) 93%,
+      var(--surface-closing) 100%
+    );
+}
+
+.scene-opening-service #hero,
+.scene-opening-service #approach,
+.scene-opening-service #service-speed,
+.scene-editorial-cream #why-pcs,
+.scene-editorial-cream #deployment-model,
+.scene-deployment-technical #system-architecture,
+.scene-deployment-technical #initial-platform,
+.scene-deployment-technical #built-for-india,
+.scene-reliability-development #service-reliability,
+.scene-development-closing #development-pathway,
+.scene-development-closing #partners,
+.scene-development-closing .site-footer {
   background: transparent;
 }
 
@@ -3573,89 +3462,180 @@
   padding-block: 0;
 }
 
-.service-speed-section::after,
-.service-speed-conclusion::before,
-.service-speed-conclusion::after,
-#service-reliability::before,
-.chapter-technical::before,
-.chapter-closing::before {
-  display: none;
-}
-
 .service-speed-main {
-  padding-block: clamp(88px, 7vw, 96px) clamp(56px, 4.8vw, 70px);
+  padding-block: clamp(88px, 7vw, 96px) clamp(52px, 4.6vw, 64px);
 }
 
-.service-speed-conclusion {
+.scene-opening-service .service-speed-conclusion {
   margin-top: 0;
+  padding-top: clamp(72px, 6vw, 96px);
+  padding-bottom: clamp(48px, 4vw, 64px);
   color: var(--color-bark);
 }
 
-.surface-editorial-warm #development-pathway {
-  padding-bottom: clamp(88px, 7vw, 104px);
+.scene-reliability-development #service-reliability {
+  padding-top: clamp(72px, 5.5vw, 88px);
+  padding-bottom: clamp(64px, 5vw, 80px);
 }
 
-.surface-closing-dark #partners {
-  padding-top: clamp(104px, 8vw, 132px);
+.scene-development-closing #development-pathway {
+  padding-bottom: clamp(72px, 6vw, 88px);
 }
 
-.surface-closing-dark .site-footer {
+.scene-development-closing #partners {
+  padding-top: clamp(96px, 7vw, 120px);
+}
+
+.scene-development-closing #partners,
+.scene-development-closing .site-footer {
+  color: var(--color-sheet-white);
+}
+
+.scene-development-closing .site-footer {
   margin-top: 0;
   border-top-color: color-mix(in srgb, var(--color-sage-mist) 12%, transparent);
 }
 
 @supports not (background: linear-gradient(180deg in oklab, #000, #fff)) {
-  .surface-bridge-a {
+  .scene-opening-service {
     background:
-      radial-gradient(76% 78% at 18% 8%, rgb(147 189 171 / 0.24) 0%, rgb(147 189 171 / 0) 70%),
-      linear-gradient(180deg, var(--surface-opening-mid) 0%, #36594d 24%, #849583 55%, #d6d6c8 82%, var(--surface-editorial-cream) 100%);
+      radial-gradient(95% 30% at 50% 82%, rgb(230 232 211 / 0.42) 0%, rgb(175 190 174 / 0.20) 45%, rgb(175 190 174 / 0) 74%),
+      linear-gradient(180deg, var(--surface-dark) 0%, var(--surface-dark) 61%, #15322d 68%, var(--transition-forest) 75%, var(--transition-sage) 82%, var(--transition-pale) 89%, #e7e4d9 95%, var(--surface-cream) 100%);
   }
 
-  .surface-bridge-b {
-    background: linear-gradient(180deg, var(--surface-editorial-cream) 0%, #e7e5db 48%, var(--surface-technical-sage) 100%);
-  }
-
-  .surface-bridge-c {
-    background: linear-gradient(180deg, var(--surface-technical-sage) 0%, #e5e4d9 52%, var(--surface-editorial-warm) 100%);
-  }
-
-  .surface-bridge-d {
+  .scene-deployment-technical {
     background:
-      radial-gradient(70% 54% at 72% 52%, rgb(22 88 74 / 0.18) 0%, rgb(22 88 74 / 0) 72%),
-      linear-gradient(180deg, var(--surface-editorial-warm) 0%, #d4d8ca 22%, #6f8778 46%, #143a32 68%, var(--surface-closing-dark) 100%);
+      radial-gradient(60% 42% at 78% 18%, rgb(123 196 244 / 0.10) 0%, rgb(123 196 244 / 0) 70%),
+      linear-gradient(180deg, var(--surface-cream) 0, var(--surface-cream) 120px, #e4e5da 190px, var(--surface-sage) 280px, var(--surface-sage) 100%);
+  }
+
+  .scene-reliability-development {
+    background: linear-gradient(180deg, var(--surface-sage) 0, #e0e1d5 72px, var(--surface-warm) 132px, var(--surface-warm) 100%);
+  }
+
+  .scene-development-closing {
+    background:
+      radial-gradient(80% 32% at 50% 54%, rgb(166 191 174 / 0.18), rgb(166 191 174 / 0) 74%),
+      linear-gradient(180deg, var(--surface-warm) 0%, var(--surface-warm) 47%, #dce0d3 55%, #a4b5a5 63%, #68877a 71%, #315a4e 79%, var(--surface-dark-mid) 86%, var(--surface-closing) 93%, var(--surface-closing) 100%);
   }
 }
 
 @media (max-width: 1023px) {
-  .surface-bridge-a .service-speed-conclusion {
-    padding-top: 96px;
-    padding-bottom: 58px;
+  .scene-opening-service {
+    background:
+      radial-gradient(104% 28% at 50% 82%, rgb(230 232 211 / 0.36) 0%, rgb(175 190 174 / 0.18) 48%, rgb(175 190 174 / 0) 75%),
+      linear-gradient(
+        180deg in oklab,
+        var(--surface-dark) 0%,
+        var(--surface-dark) 57%,
+        #15322d 65%,
+        var(--transition-forest) 73%,
+        var(--transition-sage) 81%,
+        var(--transition-pale) 89%,
+        var(--surface-cream) 100%
+      );
   }
 
-  .surface-closing-dark #partners {
-    padding-top: 96px;
+  .scene-deployment-technical {
+    background:
+      radial-gradient(70% 40% at 72% 16%, rgb(123 196 244 / 0.08) 0%, rgb(123 196 244 / 0) 70%),
+      linear-gradient(180deg in oklab, var(--surface-cream) 0, var(--surface-cream) 88px, #e4e5da 148px, var(--surface-sage) 220px, var(--surface-sage) 100%);
+  }
+
+  .scene-development-closing {
+    background:
+      radial-gradient(90% 28% at 50% 54%, rgb(166 191 174 / 0.16), rgb(166 191 174 / 0) 74%),
+      linear-gradient(
+        180deg in oklab,
+        var(--surface-warm) 0%,
+        var(--surface-warm) 42%,
+        #dce0d3 51%,
+        #a4b5a5 61%,
+        #68877a 70%,
+        #315a4e 78%,
+        var(--surface-dark-mid) 86%,
+        var(--surface-closing) 93%,
+        var(--surface-closing) 100%
+      );
+  }
+
+  .scene-opening-service .service-speed-conclusion {
+    padding-top: 66px;
+    padding-bottom: 56px;
+  }
+
+  .scene-development-closing #partners {
+    padding-top: 86px;
   }
 }
 
 @media (max-width: 767px) {
-  .surface-bridge-a .service-speed-conclusion {
-    padding-top: 72px;
-    padding-bottom: 48px;
+  .site-story,
+  .scene {
+    overflow: hidden;
   }
 
-  .surface-bridge-d {
-    height: min(var(--surface-bridge-warm-dark), 156px);
+  .scene-opening-service {
+    background:
+      radial-gradient(120% 26% at 50% 81%, rgb(230 232 211 / 0.34) 0%, rgb(175 190 174 / 0.18) 44%, rgb(175 190 174 / 0) 74%),
+      linear-gradient(
+        180deg in oklab,
+        var(--surface-dark) 0%,
+        var(--surface-dark) 55%,
+        #15322d 64%,
+        var(--transition-forest) 72%,
+        var(--transition-sage) 80%,
+        var(--transition-pale) 89%,
+        var(--surface-cream) 100%
+      );
+  }
+
+  .scene-deployment-technical {
+    background:
+      radial-gradient(90% 34% at 52% 15%, rgb(123 196 244 / 0.08) 0%, rgb(123 196 244 / 0) 70%),
+      linear-gradient(180deg in oklab, var(--surface-cream) 0, var(--surface-cream) 72px, #e4e5da 122px, var(--surface-sage) 168px, var(--surface-sage) 100%);
+  }
+
+  .scene-reliability-development {
+    background: linear-gradient(180deg in oklab, var(--surface-sage) 0, #e0e1d5 52px, var(--surface-warm) 92px, var(--surface-warm) 100%);
+  }
+
+  .scene-development-closing {
+    background:
+      radial-gradient(110% 24% at 50% 55%, rgb(166 191 174 / 0.14), rgb(166 191 174 / 0) 74%),
+      linear-gradient(
+        180deg in oklab,
+        var(--surface-warm) 0%,
+        var(--surface-warm) 38%,
+        #dce0d3 48%,
+        #a4b5a5 58%,
+        #68877a 68%,
+        #315a4e 78%,
+        var(--surface-dark-mid) 86%,
+        var(--surface-closing) 92%,
+        var(--surface-closing) 100%
+      );
   }
 
   .service-speed-main {
     padding-block: var(--mobile-section-major) 42px;
   }
 
-  .surface-editorial-warm #development-pathway {
-    padding-bottom: 58px;
+  .scene-opening-service .service-speed-conclusion {
+    padding-top: 48px;
+    padding-bottom: 44px;
   }
 
-  .surface-closing-dark #partners {
-    padding-top: 72px;
+  .scene-reliability-development #service-reliability {
+    padding-top: 54px;
+    padding-bottom: 52px;
+  }
+
+  .scene-development-closing #development-pathway {
+    padding-bottom: 52px;
+  }
+
+  .scene-development-closing #partners {
+    padding-top: 66px;
   }
 }

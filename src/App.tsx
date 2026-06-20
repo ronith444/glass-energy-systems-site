@@ -17,31 +17,26 @@ export default function App() {
     <>
       <SiteHeader />
       <main className="site-story">
-        <div className="surface-chapter surface-opening-dark">
+        <div className="scene scene-opening-service">
           <HeroSection />
           <WhatWeBuildSection />
           <ServiceSpeedSection />
-        </div>
-        <div className="surface-bridge surface-bridge-a surface-bridge-dark-cream">
           <ServiceSpeedConclusion />
         </div>
-        <div className="surface-chapter surface-editorial-cream">
+        <div className="scene scene-editorial-cream">
           <WhyPCSSection />
           <DeploymentModelSection />
         </div>
-        <div className="surface-bridge surface-bridge-b surface-bridge-cream-sage" aria-hidden="true" />
-        <div className="surface-chapter surface-technical-sage">
+        <div className="scene scene-deployment-technical">
           <SystemArchitectureSection />
           <InitialPlatformSection />
           <BuiltForIndiaSection />
         </div>
-        <div className="surface-bridge surface-bridge-c surface-bridge-sage-warm" aria-hidden="true" />
-        <div className="surface-chapter surface-editorial-warm">
+        <div className="scene scene-reliability-development">
           <ServiceReliabilitySection />
-          <DevelopmentPathwaySection />
         </div>
-        <div className="surface-bridge surface-bridge-d surface-bridge-warm-dark" aria-hidden="true" />
-        <div className="surface-chapter surface-closing-dark">
+        <div className="scene scene-development-closing">
+          <DevelopmentPathwaySection />
           <PartnershipCTASection />
           <SiteFooter />
         </div>
