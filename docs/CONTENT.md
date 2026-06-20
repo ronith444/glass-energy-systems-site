@@ -7,12 +7,12 @@ Links:
 - Approach
 - Technology
 - Service & Support
-- Development
+- Operations
 - Company
 
 CTA:
 
-`Discuss a pilot`
+`Discuss a project`
 
 ## Hero
 
@@ -22,15 +22,15 @@ Eyebrow:
 
 Headline:
 
-`PCS-first energy storage infrastructure for India.`
+`PCS infrastructure for India’s C&I storage.`
 
 Supporting copy:
 
-`Glass Energy Systems is building the deployment and reliability layer around power conversion—bringing together integration, testing, commissioning, interoperability and responsive field support for commercial and industrial energy storage.`
+`Glass Energy Systems handles PCS integration, documentation, commissioning and support for dependable C&I battery storage deployment.`
 
 Primary CTA:
 
-`Discuss a pilot`
+`Discuss a project`
 
 Secondary CTA:
 
@@ -38,7 +38,7 @@ Secondary CTA:
 
 Technical labels:
 
-- 100kW bidirectional PCS initial focus
+- 100kW bidirectional PCS path
 - 700-1000V DC
 - 400/415V AC
 - 3-phase · 50Hz
@@ -52,11 +52,11 @@ Eyebrow:
 
 Headline:
 
-`Power conversion is the starting point. Deployment reliability is the product.`
+`PCS integration, ready for the field.`
 
 Body:
 
-`A PCS specification alone does not make a storage project deployable. Real execution also requires verified hardware, complete documentation, working communication protocols, disciplined commissioning and support when the system enters the field.`
+`Glass turns PCS hardware, supplier documents, protocols and site requirements into a deployable operating package.`
 
 Capabilities:
 
@@ -77,7 +77,7 @@ Headline:
 
 Body:
 
-`Storage projects lose time when responsibility is fragmented, documentation is incomplete and every issue passes through multiple companies before action begins. Glass is being designed to shorten that chain.`
+`Storage projects lose time when ownership is unclear. Glass keeps documentation, triage, spares and support connected.`
 
 Principles:
 
@@ -98,18 +98,18 @@ Eyebrow:
 
 Headline:
 
-`The highest-leverage control point in the storage system.`
+`The control point of the storage system.`
 
 Body:
 
-`The PCS sits between the battery, the electrical load and the grid. It determines how energy is converted, how the system responds and how effectively the surrounding components operate together.`
+`The PCS connects battery, load and grid. It determines conversion quality, response behavior and system coordination.`
 
 Reasons:
 
 - Central to system performance
 - Focused route to market
 - Immediate deployment value
-- Foundation for future intelligence
+- Foundation for controls and diagnostics
 
 ## Deployment Model
 
@@ -119,7 +119,7 @@ Eyebrow:
 
 Headline:
 
-`Designed around the work that happens before and after delivery.`
+`Before delivery. After commissioning.`
 
 Stages:
 
@@ -132,7 +132,7 @@ Stages:
 
 Closing line:
 
-`Qualify once. Document properly. Commission with context. Support without delay.`
+`Qualify. Configure. Verify. Integrate. Commission. Support.`
 
 ## System Architecture
 
@@ -142,7 +142,7 @@ Eyebrow:
 
 Headline:
 
-`One accountable layer across power, controls and field support.`
+`One layer across power, controls and support.`
 
 Nodes:
 
@@ -153,20 +153,20 @@ Nodes:
 - Diagnostics and support record
 - Commercial and industrial application
 
-## Initial Platform
+## PCS Platform
 
 Eyebrow:
 
-`INITIAL PLATFORM`
+`PCS PLATFORM`
 
 Headline:
 
-`Starting narrow. Building correctly.`
+`A standardized PCS operating layer.`
 
 Specifications:
 
-- 100kW initial focus
-- 700-1000V DC target
+- 100kW PCS path
+- 700-1000V DC
 - 400/415V AC
 - 3-phase · 50Hz
 - CAN · Modbus · Ethernet
@@ -174,7 +174,7 @@ Specifications:
 
 Disclaimer:
 
-`Specifications represent the initial target architecture and remain subject to engineering and pilot validation.`
+`Project specifications are confirmed through engineering review and supplier documentation.`
 
 ## Built for India
 
@@ -201,7 +201,7 @@ Eyebrow:
 
 Headline:
 
-`Delivery is an event. Reliability is an operating system.`
+`Reliability is an operating system.`
 
 Modules:
 
@@ -213,29 +213,29 @@ Modules:
 
 Closing line:
 
-`The long-term advantage is not simply supplying a PCS. It is learning from every deployment and resolving the next issue faster.`
+`Commissioning records, diagnostics, spares and escalation paths keep every issue easier to resolve.`
 
-## Development Pathway
+## Operating Capability
 
 Eyebrow:
 
-`DEVELOPMENT PATHWAY`
+`OPERATING CAPABILITY`
 
 Headline:
 
-`Localize the capabilities that create value, in the right order.`
+`Capability across the system lifecycle.`
 
 Stages:
 
-1. Pilot proven technology
-2. Own deployment reliability
-3. Expand local assembly
-4. Deepen controls capability
-5. Build the intelligence layer
+1. Qualified hardware
+2. Deployment ownership
+3. Documentation control
+4. Controls integration
+5. Service intelligence
 
 Disclaimer:
 
-`This is a staged development direction, not a claim that every capability is currently operational.`
+`These operating disciplines support supplier coordination, commissioning and field operation.`
 
 ## Partnership CTA
 
@@ -245,15 +245,15 @@ Eyebrow:
 
 Headline:
 
-`Build a pilot that can be supported—not just delivered.`
+`Build storage projects that stay supported.`
 
 Body:
 
-`We are engaging with C&I storage integrators, battery partners, PCS and component suppliers, pilot customers and technical service partners who want to build dependable energy-storage capability for India.`
+`Glass works with integrators, battery partners, PCS suppliers, C&I customers and service partners across India’s storage market.`
 
 Primary CTA:
 
-`Discuss a pilot`
+`Discuss a project`
 
 Secondary CTA:
 
@@ -263,7 +263,7 @@ Secondary CTA:
 
 Brand statement:
 
-`Building the deployment, reliability and intelligence layer for India’s energy-storage infrastructure.`
+`Deployment, reliability and intelligence for India’s energy-storage infrastructure.`
 
 Final line:
 
@@ -282,12 +282,12 @@ Do not claim:
 - existing certifications unless verified
 - guaranteed response times
 
-Use terms such as:
+Use confident, specific public language:
 
-- developing
-- initial focus
-- target architecture
-- intended
-- planned
-- pilot pathway
-- subject to validation
+- PCS integration
+- supplier documentation
+- protocol mapping
+- commissioning records
+- service ownership
+- spares coordination
+- field support
