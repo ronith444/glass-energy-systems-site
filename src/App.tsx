@@ -2,7 +2,7 @@ import { SiteHeader } from "./components/layout/SiteHeader";
 import { SiteFooter } from "./components/layout/SiteFooter";
 import { HeroSection } from "./components/sections/HeroSection";
 import { WhatWeBuildSection } from "./components/sections/WhatWeBuildSection";
-import { ServiceSpeedSection } from "./components/sections/ServiceSpeedSection";
+import { ServiceSpeedConclusion, ServiceSpeedSection } from "./components/sections/ServiceSpeedSection";
 import { WhyPCSSection } from "./components/sections/WhyPCSSection";
 import { DeploymentModelSection } from "./components/sections/DeploymentModelSection";
 import { SystemArchitectureSection } from "./components/sections/SystemArchitectureSection";
@@ -16,26 +16,32 @@ export default function App() {
   return (
     <>
       <SiteHeader />
-      <main>
-        <div className="chapter chapter-dark">
+      <main className="site-story">
+        <div className="surface-chapter surface-opening-dark">
           <HeroSection />
           <WhatWeBuildSection />
           <ServiceSpeedSection />
         </div>
-        <div className="chapter chapter-light">
+        <div className="surface-bridge surface-bridge-a surface-bridge-dark-cream">
+          <ServiceSpeedConclusion />
+        </div>
+        <div className="surface-chapter surface-editorial-cream">
           <WhyPCSSection />
           <DeploymentModelSection />
         </div>
-        <div className="chapter chapter-technical">
+        <div className="surface-bridge surface-bridge-b surface-bridge-cream-sage" aria-hidden="true" />
+        <div className="surface-chapter surface-technical-sage">
           <SystemArchitectureSection />
           <InitialPlatformSection />
           <BuiltForIndiaSection />
         </div>
-        <div className="chapter chapter-editorial">
+        <div className="surface-bridge surface-bridge-c surface-bridge-sage-warm" aria-hidden="true" />
+        <div className="surface-chapter surface-editorial-warm">
           <ServiceReliabilitySection />
-        </div>
-        <div className="development-closing-scene">
           <DevelopmentPathwaySection />
+        </div>
+        <div className="surface-bridge surface-bridge-d surface-bridge-warm-dark" aria-hidden="true" />
+        <div className="surface-chapter surface-closing-dark">
           <PartnershipCTASection />
           <SiteFooter />
         </div>

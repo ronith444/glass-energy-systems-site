@@ -44,11 +44,16 @@ export function ServiceSpeedSection() {
           </div>
         </Container>
       </div>
-      <div className="service-speed-conclusion">
-        <Container>
-          <p className="service-speed-highlight">{serviceSpeed.highlight}</p>
-        </Container>
-      </div>
     </Section>
+  );
+}
+
+export function ServiceSpeedConclusion() {
+  return (
+    <div className="service-speed-conclusion">
+      <Container>
+        <p className="service-speed-highlight">{serviceSpeed.highlight}</p>
+      </Container>
+    </div>
   );
 }

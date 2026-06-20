@@ -21,6 +21,16 @@
   --glass-edge-highlight: color-mix(in srgb, var(--color-glass-ice) 82%, var(--color-sheet-white));
   --glass-surface-dark: color-mix(in srgb, var(--color-glass-blue-deep) 38%, transparent);
   --glass-surface-light: color-mix(in srgb, var(--color-glass-ice) 18%, transparent);
+  --surface-opening-dark: #081a16;
+  --surface-opening-mid: #123a31;
+  --surface-editorial-cream: #f3f1ec;
+  --surface-editorial-warm: #f7f3ed;
+  --surface-technical-sage: #d8ddd2;
+  --surface-closing-dark: #071916;
+  --surface-bridge-dark-cream: clamp(320px, 25vw, 380px);
+  --surface-bridge-cream-sage: clamp(140px, 11vw, 170px);
+  --surface-bridge-sage-warm: clamp(120px, 9vw, 150px);
+  --surface-bridge-warm-dark: clamp(390px, 30vw, 450px);
 
   --font-brand: "DM Sans", ui-sans-serif, system-ui, sans-serif;
 
@@ -65,4 +75,22 @@
   --text-eyebrow: 0.8125rem;
   --text-meta: 0.875rem;
 
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --surface-bridge-dark-cream: 260px;
+    --surface-bridge-cream-sage: 120px;
+    --surface-bridge-sage-warm: 104px;
+    --surface-bridge-warm-dark: 320px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --surface-bridge-dark-cream: 220px;
+    --surface-bridge-cream-sage: 96px;
+    --surface-bridge-sage-warm: 84px;
+    --surface-bridge-warm-dark: 248px;
+  }
 }
